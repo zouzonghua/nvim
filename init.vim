@@ -60,7 +60,7 @@ colorscheme OceanicNext
 " 当打开 NERDTree 窗口时，自动显示 Bookmarks
 " let NERDTreeShowBookmarks=1
 
-" 按下 control+n 调出/隐藏 NERDTree
+" 按下 control+b 调出/隐藏 NERDTree
  map <C-b> :NERDTreeToggle<CR>
 
 
