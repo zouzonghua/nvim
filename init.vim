@@ -23,6 +23,7 @@ call plug#begin()
  " git 插件
  Plug 'airblade/vim-gitgutter'
  Plug 'tpope/vim-fugitive'
+ Plug 'kdheepak/lazygit.nvim', { 'branch': 'nvim-v0.4.3' }
 
  " markdown 插件
  Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
@@ -83,3 +84,9 @@ set encoding=UTF-8
 
 autocmd Filetype markdown noremap ,m :MarkdownPreview<CR>
 autocmd Filetype markdown noremap ,ms :MarkdownPreviewStop<CR>
+
+
+"==================== LazyGit =====================
+" setup mapping to call :LazyGit
+map <C-g> :LazyGit<CR>
+
