@@ -1,92 +1,55 @@
-" vim 插件
-call plug#begin()
+"--------------
+" plugins
+"--------------
+call plug#begin('~/.config/nvim/plugged')
+  " 编辑器功能
+  Plug 'vim-airline/vim-airline'
+  Plug 'vim-airline/vim-airline-themes'
+  Plug 'preservim/nerdtree', {'on': 'NERDTreeToggle'}
+  Plug 'Xuyuanp/nerdtree-git-plugin'
+  Plug 'airblade/vim-gitgutter'
+  Plug 'tpope/vim-fugitive'
+  Plug 'ryanoasis/vim-devicons'
+  Plug 'dstein64/vim-startuptime'
 
- " 底部状态栏
- Plug 'vim-airline/vim-airline'       
- Plug 'vim-airline/vim-airline-themes' "airline 的主题
+  " 基础开发
+  Plug 'mattn/emmet-vim'
+  Plug 'terryma/vim-multiple-cursors'
+  Plug 'tpope/vim-surround'
 
- " 侧边栏文件管理器
- Plug 'preservim/nerdtree'
- Plug 'Xuyuanp/nerdtree-git-plugin'
- Plug 'ryanoasis/vim-devicons'
+  " JavaScript 开发
 
- " 自定补全括号
- " Plug 'jiangmiao/auto-pairs'
+  " 配色
+  Plug 'morhetz/gruvbox'
 
- " 智能提示
- Plug 'neoclide/coc.nvim', {'branch': 'release'}
+call plug#end()
 
- " 主题
- " Plug 'morhetz/gruvbox'
- Plug 'mhartington/oceanic-next'
+"--------------
+" Settings
+"--------------
+set clipboard=unnamed " 设置寄存器和系统剪切板通用
+set noswapfile        " 不生成缓冲文件
+set nocompatible      " 不与Vi 兼容（采用Vim 自己的操作命令)
+set backspace=indent,eol,start " 解决退格键失效的问题
+set updatetime=100    " 刷新时间
+set mouse=a           " 支持使用鼠标
+set hidden            " Vim 会在切换 Buffer 的时候检测当前 Buffer 是否保存，如果还未保存，则会以打开一个新 Window 的形式打开另一个 Buffer
 
- " git 插件
- Plug 'airblade/vim-gitgutter'
- Plug 'tpope/vim-fugitive'
- Plug 'kdheepak/lazygit.nvim', { 'branch': 'nvim-v0.4.3' }
+"--------------
+" Filetype and Encoding
+"--------------
+filetype on           " 识别文件类型
+filetype indent on    " 根据文件类型进行缩放
+filetype plugin on    " 根据文件类型载入插件
 
- " markdown 插件
- Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
+"--------------
+" file encoding
+"--------------
+set encoding=utf-8
+scriptencoding utf-8
 
- call plug#end()
-
-" nvim 配置
- 
-" 显示行号
- set number
-" 高亮当前行
- set cursorline
-
-" Or if you have Neovim >= 0.1.5
-if (has("termguicolors"))
- set termguicolors
-endif
-
-" Theme
-syntax enable
-colorscheme OceanicNext
-
-" 插件配置
- 
-"==================== NERDTree =====================
-
-" config
-
-" 在 vim 启动的时候默认开启 NERDTree（autocmd 可以缩写为 au）
-" autocmd VimEnter * NERDTree
-
-" 设置 NERDTree 窗口宽度
-" let NERDTreeWinSize=45
-
-" 当打开 NERDTree 窗口时，自动显示 Bookmarks
-" let NERDTreeShowBookmarks=1
-
-" 按下 control+b 调出/隐藏 NERDTree
- map <C-b> :NERDTreeToggle<CR>
-
-
-"==================== gruvbox =====================
-" autocmd vimenter * ++nested colorscheme gruvbox
-" 在 bashrc 或 zshrc 里面添加 gruvbox 的 256 色表：
-" source "$HOME/.config/nvim/plugged/gruvbox/gruvbox_256palette_osx.sh"
-
-
-"==================== gitgutter =====================
-" 刷新时间
-set updatetime=100
-
-
-"==================== devicons =====================
-set encoding=UTF-8
-
-
-"==================== MarkdownPreView =====================
-
-autocmd Filetype markdown noremap ,m :MarkdownPreview<CR>
-autocmd Filetype markdown noremap ,ms :MarkdownPreviewStop<CR>
-
-
-"==================== LazyGit =====================
-" setup mapping to call :LazyGit
-map <C-g> :LazyGit<CR>
+"--------------
+" key mapping
+"--------------
+let mapleader = ","
 
