@@ -38,6 +38,9 @@ sh <(curl -L https://github.com/zouzonghua/nvim/raw/main/utils/install.sh)
 ### 基础开发
 
 - emmet-vim <https://github.com/mattn/emmet-vim>
+- vim-multiple-cursors <https://github.com/terryma/vim-multiple-cursors>
+- vim-surround <https://github.com/tpope/vim-surround>
+
 
 ### 配色
 
