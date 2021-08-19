@@ -3,7 +3,7 @@ nerd_tree_bookmarks=~/.NERDTreeBookmarks
 backup_rand=$RANDOM
 
 # detect if there's a .vim folder
-if [ -d $vim_folder  ]
+if [ -d $nvim_folder  ]
 then
   echo "\033[0;31mYou already have a nvim folder in your home directory.\033[0;m"
     read -p "Would you like to backup your nvim folder first? [y/n] " ans
