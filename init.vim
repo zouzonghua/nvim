@@ -27,13 +27,13 @@ call plug#end()
 "--------------
 " Settings
 "--------------
-set clipboard=unnamed " 设置寄存器和系统剪切板通用
-set noswapfile        " 不生成缓冲文件
-set nocompatible      " 不与Vi 兼容（采用Vim 自己的操作命令)
+set clipboard=unnamed          " 设置寄存器和系统剪切板通用
+set noswapfile                 " 不生成缓冲文件
+set nocompatible               " 不与Vi 兼容（采用Vim 自己的操作命令)
 set backspace=indent,eol,start " 解决退格键失效的问题
-set updatetime=100    " 刷新时间
-set mouse=a           " 支持使用鼠标
-set hidden            " Vim 会在切换 Buffer 的时候检测当前 Buffer 是否保存，如果还未保存，则会以打开一个新 Window 的形式打开另一个 Buffer
+set updatetime=100             " 刷新时间
+set mouse=a                    " 支持使用鼠标
+set hidden                     " Vim 会在切换 Buffer 的时候检测当前 Buffer 是否保存，如果还未保存，则会以打开一个新 Window 的形式打开另一个 Buffer
 
 "--------------
 " Filetype and Encoding
