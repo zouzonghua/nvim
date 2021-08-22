@@ -1,5 +1,5 @@
 nvim_folder=~/.config/nvim
-nerd_tree_bookmarks=~/.NERDTreeBookmarks
+# nerd_tree_bookmarks=~/.NERDTreeBookmarks
 backup_rand=$RANDOM
 
 # detect if there's a .vim folder
@@ -24,8 +24,8 @@ hash git >/dev/null && /usr/bin/env git clone git@github.com:zouzonghua/nvim.git
 }
 
 # make symbolic links
-echo "link other config file to your home directory.."
-ln -s $nvim_folder/NERDTreeBookmarks $nerd_tree_bookmarks
+# echo "link other config file to your home directory.."
+# ln -s $nvim_folder/NERDTreeBookmarks $nerd_tree_bookmarks
 
 # run PlugInstall to install all plugins
 nvim +'PlugInstall --sync' +qa
