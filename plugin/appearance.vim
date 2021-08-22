@@ -2,7 +2,7 @@
 " appearance
 "--------------
 set number                  " 显示行号
-set rnu                     " 显示相对行号
+" set rnu                     " 显示相对行号
 set cursorline              " 高亮当前选中行
 set showtabline=2           " 显示 tab 分页
 set cc=80                   " 每行 80 个字符
@@ -33,15 +33,12 @@ set list                     " 显示非可见字符
 "--------------
 " ColorScheme
 "--------------
+"set termguicolors             " enable true color
 set t_Co=256                  " 启用256色
 syntax on                     " 语法高亮
 
-" ~/.zshrc => source "$HOME/.vim/plugged/gruvbox/gruvbox_256palette_osx.sh"
+if has('termguicolors')
+  set termguicolors
+endif
 
-try
-  set background=dark
-  colorscheme gruvbox
-  highlight EndOfBuffer cterm=NONE ctermfg=bg ctermbg=bg
-catch
-endtry
-
+colorscheme zephyr
