@@ -10,12 +10,8 @@ require'nvim-treesitter.configs'.setup {
   },
   ensure_installed = {
     "tsx",
-    "toml",
-    "fish",
-    "php",
     "json",
     "yaml",
-    "swift",
     "html",
     "scss"
   },
