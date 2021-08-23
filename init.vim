@@ -12,8 +12,8 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'glepnir/dashboard-nvim'
     Plug 'glepnir/indent-guides.nvim'
     Plug 'psliwka/vim-smoothie'
-    "Plug 'nvim-lua/popup.nvim'
     Plug 'tpope/vim-fugitive'
+    Plug 'kassio/neoterm'
 
     " 基础开发
     Plug 'tpope/vim-surround'
