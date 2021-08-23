@@ -17,10 +17,10 @@ inoremap <RIGHT> <NOP>
 " imap kk <Esc>
 
 " 切换代码缩进
-vmap <S-Tab> <
-vmap <Tab> >
-nmap <S-Tab> <<
-nmap <Tab> >>
+" vmap <S-Tab> <
+" vmap <Tab> >
+" nmap <S-Tab> <<
+" nmap <Tab> >>
 
 " 关闭 buffers
 " nnoremap <C-x> :bd<CR>
