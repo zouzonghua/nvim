@@ -1,3 +1,8 @@
+if !exists('g:lspconfig')
+  echom "Not loaded lspconfig"
+  finish
+endif
+
 " need install `npm i -g typescript typescript-language-server diagnostic-languageserver`
 
 lua << EOF

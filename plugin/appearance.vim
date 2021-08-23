@@ -41,5 +41,8 @@ if has('termguicolors')
   set termguicolors
 endif
 
-colorscheme zephyr
+try
+  colorscheme zephyr
+catch
+endtry
 

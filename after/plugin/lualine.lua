@@ -1,11 +1,10 @@
 
 local status, lualine = pcall(require, "lualine")
 if (not status) then return end
-
 lualine.setup {
   options = {
     icons_enabled = true,
-    theme = 'auto',
+    theme = 'solarized_dark',
     section_separators = {'', ''},
     component_separators = {'', ''},
     disabled_filetypes = {}
@@ -32,7 +31,7 @@ lualine.setup {
     lualine_c = {{
       'filename',
       file_status = true, -- displays file status (readonly status, modified status)
-      path = 1 -- 0 = just filename, 1 = relative path, 2 = absolute path
+      path = 1 -- 0 = jst filename, 1 = relative path, 2 = absolute path
     }},
     lualine_x = {'location'},
     lualine_y = {},

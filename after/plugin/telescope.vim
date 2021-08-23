@@ -1,3 +1,5 @@
+if !exists('g:loaded_telescope') | finish | endif
+
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
@@ -18,3 +20,10 @@ require('telescope').setup{
 }
 EOF
 
+
+lua << EOF
+_G.telescope_live_grep_in_path = function(path)
+ local _path = path or vim.fn.input("Dir: ", "", "dir")
+ require("telescope.builtin").live_grep({search_dirs = {_path}})
+end
+EOF

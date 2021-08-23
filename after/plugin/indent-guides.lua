@@ -1,4 +1,7 @@
-require('indent_guides').setup({
+local status, indent_guides = pcall(require, "indent_guides")
+if (not status) then return end
+
+indent_guides.setup({
     indent_levels = 30;
     indent_guide_size = 1;
     indent_start_level = 1;

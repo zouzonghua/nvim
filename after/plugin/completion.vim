@@ -1,4 +1,3 @@
-
 set completeopt=menuone,noinsert,noselect
 
 " Use <Tab> and <S-Tab> to navigate through popup menu
