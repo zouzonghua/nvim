@@ -13,6 +13,7 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'glepnir/indent-guides.nvim'
     Plug 'psliwka/vim-smoothie'
     Plug 'tpope/vim-fugitive'
+    Plug 'airblade/vim-gitgutter'
     Plug 'kassio/neoterm'
 
     " 基础开发
