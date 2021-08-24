@@ -24,3 +24,17 @@ inoremap <RIGHT> <NOP>
 
 " 关闭 buffers
 " nnoremap <C-x> :bd<CR>
+
+" 代码换行自定义快捷键 <leader>z
+let g:IsWrapStatus = 0
+nnoremap <leader>z :call ToggleWrap()<cr>
+fun! ToggleWrap()
+    if g:IsWrapStatus == 0
+        exe ":set wrap"
+        let g:IsWrapStatus = 1
+    else
+        exe ":set nowrap"
+        let g:IsWrapStatus = 0
+    endif
+endfun
+

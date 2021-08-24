@@ -8,6 +8,7 @@ set showtabline=2           " 显示 tab 分页
 set cc=80                   " 每行 80 个字符
 set linebreak               " 文本换行以文字为单位
 set showcmd                 " 底部显示键入指令
+set nowrap                  " 文本折行
 
 "--------------
 " split window
