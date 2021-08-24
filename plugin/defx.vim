@@ -36,7 +36,7 @@ call defx#custom#column('git', 'indicators', {
 
 call defx#custom#option('_', {
   \ 'winwidth': 35,
-  \ 'columns': 'git:mark:indent:icons:filename:type:size',
+  \ 'columns': 'git:mark:indent:icons:filename:type',
   \ 'split': 'vertical',
   \ 'direction': 'topleft',
   \ 'show_ignored_files': 0,
