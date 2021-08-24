@@ -1,1 +1,2 @@
-nmap <C-p> <Plug>MarkdownPreviewToggle
+let g:mkdp_browser = 'safari'
+nmap <A-p> <Plug>MarkdownPreviewToggl
