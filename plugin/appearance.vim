@@ -42,7 +42,7 @@ if has('termguicolors')
 endif
 
 try
- set background=dark " or light if you want light mode
+ let g:gruvbox_contrast_dark = "hard"
  colorscheme gruvbox 
 catch
 endtry
