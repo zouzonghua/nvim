@@ -9,6 +9,7 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'akinsho/bufferline.nvim'
     Plug 'hoob3rt/lualine.nvim'
     Plug 'kassio/neoterm'
+    Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 
     " git 增强
     Plug 'tpope/vim-fugitive'
