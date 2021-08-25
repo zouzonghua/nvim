@@ -1,9 +1,9 @@
 if !exists('g:loaded_telescope') | finish | endif
 
-nnoremap <leader>ff <cmd>Telescope find_files<cr>
-nnoremap <leader>fg <cmd>Telescope live_grep<cr>
-nnoremap <leader>fb <cmd>Telescope buffers<cr>
-nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+nnoremap <leader>ff <cmd>Telescope find_files prompt_prefix=🔍<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep prompt_prefix=🔍<cr>
+nnoremap <leader>fb <cmd>Telescope buffers prompt_prefix=🔍<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags prompt_prefix=🔍<cr>
 
 lua << EOF
 local actions = require('telescope.actions')
@@ -16,6 +16,10 @@ require('telescope').setup{
         ["q"] = actions.close
       },
     },
+    file_ignore_patterns = {
+      "node_modules"
+    }
+
   }
 }
 EOF
