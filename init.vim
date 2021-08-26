@@ -10,6 +10,7 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'hoob3rt/lualine.nvim'
     Plug 'kassio/neoterm'
     Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+    Plug 'jiangmiao/auto-pairs'
 
     " git 增强
     Plug 'tpope/vim-fugitive'
@@ -35,7 +36,6 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'folke/lsp-colors.nvim'
     Plug 'nvim-lua/completion-nvim'
     Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
-    Plug 'nvim-lua/completion-nvim'
 
   endif
 
