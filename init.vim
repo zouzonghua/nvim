@@ -11,6 +11,7 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'kassio/neoterm'
     Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
     Plug 'jiangmiao/auto-pairs'
+    Plug 'editorconfig/editorconfig-vim'
 
     " git 增强
     Plug 'tpope/vim-fugitive'
