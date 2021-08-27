@@ -10,6 +10,7 @@ lua << EOF
       diagnostics_indicator = function(count, level, diagnostics_dict, context)
         return "("..count..")"
       end,
+      show_close_icon = false,
       sort_by = function(buffer_a, buffer_b)
       -- add custom logic
       return buffer_a.ordinal < buffer_b.ordinal
