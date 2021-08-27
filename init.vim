@@ -16,9 +16,11 @@ call plug#begin('~/.config/nvim/plugged')
     " git 增强
     Plug 'tpope/vim-fugitive'
     Plug 'airblade/vim-gitgutter'
+    Plug 'tveskag/nvim-blame-line'
 
     " 基础开发
     Plug 'terryma/vim-multiple-cursors'
+    Plug 'mhartington/formatter.nvim'
 
     " 文件管理
     Plug 'kristijanhusak/defx-git'

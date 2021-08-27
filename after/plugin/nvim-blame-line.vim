@@ -1,0 +1,2 @@
+autocmd BufEnter * EnableBlameLine
+
