@@ -3,8 +3,9 @@ try
 lua << EOF
   require("bufferline").setup{
     options= {
-  numbers = "ordinal",
-    number_style = "note", -- buffer_id at index 1, ordinal at index 2
+      numbers = function(opts)
+        return string.format('%s.', opts.ordinal, opts.id)
+      end,
       diagnostics = "nvim_lsp",
       diagnostics_indicator = function(count, level, diagnostics_dict, context)
         return "("..count..")"
@@ -12,7 +13,7 @@ lua << EOF
       sort_by = function(buffer_a, buffer_b)
       -- add custom logic
       return buffer_a.ordinal < buffer_b.ordinal
-    end
+      end
     }
   }
 EOF
