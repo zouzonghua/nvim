@@ -18,7 +18,6 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'airblade/vim-gitgutter'
 
     " 基础开发
-    Plug 'tpope/vim-surround'
     Plug 'terryma/vim-multiple-cursors'
 
     " 文件管理
@@ -38,10 +37,9 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'nvim-lua/completion-nvim'
     Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 
-  endif
-
     " 配色
-    Plug 'morhetz/gruvbox'
+    Plug 'tomasiser/vim-code-dark'
+  endif
 
 call plug#end()
 
@@ -74,5 +72,4 @@ scriptencoding utf-8
 " key mapping
 "--------------
 let mapleader = ","
-
 

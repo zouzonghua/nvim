@@ -36,6 +36,7 @@ set list                     " 显示非可见字符
 "--------------
 "set termguicolors             " enable true color
 set t_Co=256                  " 启用256色
+set t_ut=
 syntax on                     " 语法高亮
 
 if has('termguicolors')
@@ -43,8 +44,7 @@ if has('termguicolors')
 endif
 
 try
- let g:gruvbox_contrast_dark = "hard"
- colorscheme gruvbox 
+    colorscheme codedark
 catch
 endtry
 
