@@ -9,9 +9,10 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'akinsho/bufferline.nvim'
     Plug 'hoob3rt/lualine.nvim'
     Plug 'kassio/neoterm'
-    Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+    Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
     Plug 'jiangmiao/auto-pairs'
     Plug 'editorconfig/editorconfig-vim'
+    Plug 'glepnir/dashboard-nvim'
 
     " git 增强
     Plug 'tpope/vim-fugitive'
