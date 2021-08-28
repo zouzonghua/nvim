@@ -1,45 +1,50 @@
-
 "--------------
 " plugins
 "--------------
 call plug#begin('~/.config/nvim/plugged')
-  if has("nvim")
-    " 编辑器功能
-    Plug 'kyazdani42/nvim-web-devicons'
-    Plug 'akinsho/bufferline.nvim'
-    Plug 'hoob3rt/lualine.nvim'
-    Plug 'kassio/neoterm'
-    Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
-    Plug 'jiangmiao/auto-pairs'
-    Plug 'editorconfig/editorconfig-vim'
-    Plug 'glepnir/dashboard-nvim'
 
-    " git 增强
+  if has("nvim")
+
+    " appearance
+    Plug 'hoob3rt/lualine.nvim'
+    Plug 'glepnir/dashboard-nvim'
+    Plug 'akinsho/bufferline.nvim'
+    Plug 'kyazdani42/nvim-web-devicons'
+
+    " markdown
+    Plug 'dhruvasagar/vim-table-mode'
+    Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+
+    " git
     Plug 'tpope/vim-fugitive'
     Plug 'airblade/vim-gitgutter'
     Plug 'tveskag/nvim-blame-line'
 
-    " 基础开发
-    Plug 'terryma/vim-multiple-cursors'
+    " editor
+    Plug 'kassio/neoterm'
+    Plug 'jiangmiao/auto-pairs'
+    Plug 'mg979/vim-visual-multi'
     Plug 'mhartington/formatter.nvim'
+    Plug 'editorconfig/editorconfig-vim'
 
-    " 文件管理
+    " file-explorer
     Plug 'kristijanhusak/defx-git'
     Plug 'kristijanhusak/defx-icons'
     Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 
-    " 搜索
+    " search
     Plug 'nvim-telescope/telescope.nvim'
     Plug 'nvim-lua/plenary.nvim'
 
-    " 语法增强
+    " lsp
     Plug 'neovim/nvim-lspconfig'
     Plug 'glepnir/lspsaga.nvim'
     Plug 'nvim-lua/completion-nvim'
     Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 
-    " 配色
+    " colorscheme
     Plug 'tomasiser/vim-code-dark'
+
   endif
 
 call plug#end()
