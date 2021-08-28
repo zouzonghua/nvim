@@ -13,7 +13,7 @@ func! ArgFunc() abort
     endif
 endfunc
 
-autocmd VimEnter * Defx `ArgFunc()`  -buffer-name=tab`tabpagenr()`
+" autocmd VimEnter * Defx `ArgFunc()`  -buffer-name=tab`tabpagenr()`
 
 let g:defx_icons_column_length = 2
 
