@@ -11,7 +11,7 @@ my neovim setttings
   git clone git@github.com:zouzonghua/nvim.git .config/nvim
 ```
 
-open nvim，run `:PlugInstall` install plugin
+open nvim, run `:PlugInstall` install plugin
 
 ### shell
 
