@@ -17,15 +17,18 @@ call plug#begin('~/.config/nvim/plugged')
 
     " git
     Plug 'tpope/vim-fugitive'
-    Plug 'airblade/vim-gitgutter'
-    Plug 'tveskag/nvim-blame-line'
 
     " editor
-    Plug 'kassio/neoterm'
     Plug 'jiangmiao/auto-pairs'
     Plug 'mg979/vim-visual-multi'
-    Plug 'mhartington/formatter.nvim'
+    Plug 'tpope/vim-surround'
     Plug 'editorconfig/editorconfig-vim'
+    Plug 'mhartington/formatter.nvim'
+    Plug 'nvim-lua/completion-nvim'
+    Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
+
+    " termial
+    Plug 'kassio/neoterm'
 
     " file-explorer
     Plug 'kristijanhusak/defx-git'
@@ -39,8 +42,6 @@ call plug#begin('~/.config/nvim/plugged')
     " lsp
     Plug 'neovim/nvim-lspconfig'
     Plug 'glepnir/lspsaga.nvim'
-    Plug 'nvim-lua/completion-nvim'
-    Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 
     " colorscheme
     Plug 'tomasiser/vim-code-dark'

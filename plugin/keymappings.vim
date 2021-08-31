@@ -38,3 +38,6 @@ fun! ToggleWrap()
     endif
 endfun
 
+" 翻译 sudo pip3 install ici
+nmap <Leader>y :!echo --==<C-R><C-w>==-- ;ici <C-R><C-W><CR>
+
