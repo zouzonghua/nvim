@@ -7,8 +7,8 @@ my neovim setttings
 ### manual
 
 ```sh
-  cd ~
-  git clone git@github.com:zouzonghua/nvim.git .config/nvim
+cd ~
+git clone git@github.com:zouzonghua/nvim.git .config/nvim
 ```
 
 open nvim, run `:PlugInstall` install plugin
