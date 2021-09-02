@@ -3,7 +3,7 @@
 "--------------
 call plug#begin('~/.config/nvim/plugged')
 
-  if has("nvim")
+  if has('nvim')
 
     " appearance
     Plug 'hoob3rt/lualine.nvim'
@@ -23,7 +23,6 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'mg979/vim-visual-multi'
     Plug 'tpope/vim-surround'
     Plug 'editorconfig/editorconfig-vim'
-    Plug 'mhartington/formatter.nvim'
     Plug 'nvim-lua/completion-nvim'
     Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 
@@ -64,9 +63,9 @@ set hidden                     " Vim 会在切换 Buffer 的时候检测当前 B
 "--------------
 " Filetype and Encoding
 "--------------
- filetype on           " 识别文件类型
- filetype indent on    " 根据文件类型进行缩放
- filetype plugin on    " 根据文件类型载入插件
+filetype on           " 识别文件类型
+filetype indent on    " 根据文件类型进行缩放
+filetype plugin on    " 根据文件类型载入插件
 
 
 "--------------
@@ -78,5 +77,5 @@ scriptencoding utf-8
 "--------------
 " key mapping
 "--------------
-let mapleader = ","
+let mapleader = ','
 

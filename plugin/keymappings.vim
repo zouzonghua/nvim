@@ -30,10 +30,10 @@ let g:IsWrapStatus = 0
 nnoremap <leader>z :call ToggleWrap()<cr>
 fun! ToggleWrap()
     if g:IsWrapStatus == 0
-        exe ":set wrap"
+        exe ':set wrap'
         let g:IsWrapStatus = 1
     else
-        exe ":set nowrap"
+        exe ':set nowrap'
         let g:IsWrapStatus = 0
     endif
 endfun

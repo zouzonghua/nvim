@@ -1,5 +1,5 @@
 if !exists('g:loaded_lspsaga')
-  echom "Not loaded treesitter"
+  echom 'Not loaded treesitter'
   finish
 endif
 

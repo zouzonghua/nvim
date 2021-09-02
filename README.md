@@ -47,7 +47,6 @@ sh <(curl -L https://github.com/zouzonghua/nvim/raw/main/utils/install.sh)
 - vim-visual-multi <https://github.com/mg979/vim-visual-multi>
 - vim-surround <https://github.com/tpope/vim-surround>
 - editorconfig-vim <https://github.com/editorconfig/editorconfig-vim>
-- formatter.nvim <https://github.com/mhartington/formatter.nvim>
 - completion.nvim <https://github.com/nvim-lua/completion-nvim>
 - nvim-treesitter <https://github.com/nvim-treesitter/nvim-treesitter>
 
