@@ -3,13 +3,12 @@ let g:nvim_tree_width = 35 "30 by default, can be width_in_columns or 'width_in_
 let g:nvim_tree_ignore = [ '.git', 'node_modules', '.cache' ] "empty by default
 let g:nvim_tree_gitignore = 1 "0 by default
 
-let g:nvim_tree_follow = 0 "0 by default, this option allows the cursor to be updated when entering a buffer
 let g:nvim_tree_indent_markers = 1 "0 by default, this option shows indent markers when folders are open
 let g:nvim_tree_hide_dotfiles = 1 "0 by default, this option hides files and folders starting with a dot `.`
-let g:nvim_tree_lsp_diagnostics = 1 "0 by default, will show lsp diagnostics in the signcolumn. See :help nvim_tree_lsp_diagnostics
+let g:nvim_tree_lsp_diagnostics = 0 "0 by default, will show lsp diagnostics in the signcolumn. See :help nvim_tree_lsp_diagnostics
 
-let g:nvim_tree_update_cwd = 0 "0 by default, will update the tree cwd when changing nvim's directory (DirChanged event). Behaves strangely with autochdir set.
-let g:nvim_tree_refresh_wait = 500 "1000 by default, control how often the tree can be refreshed, 1000 means the tree can be refresh once per 1000ms.
+let g:nvim_tree_update_cwd = 1
+let g:nvim_tree_respect_buf_cwd = 1
 
 let g:nvim_tree_window_picker_exclude = {
     \   'filetype': [
@@ -57,7 +56,7 @@ let g:nvim_tree_icons = {
     \   }
     \ }
 
-nnoremap <C-e> :NvimTreeToggle<CR>
+nnoremap <silent> <C-e> :NvimTreeToggle<CR>
 
 lua <<EOF
     local tree_cb = require'nvim-tree.config'.nvim_tree_callback
