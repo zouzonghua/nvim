@@ -16,6 +16,7 @@ call plug#begin('~/.config/nvim/plugged')
 
     " git
     Plug 'tpope/vim-fugitive'
+    Plug 'ttys3/nvim-blamer.lua'
 
     " editor
     Plug 'jiangmiao/auto-pairs'

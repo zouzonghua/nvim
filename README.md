@@ -39,6 +39,7 @@ sh <(curl -L https://github.com/zouzonghua/nvim/raw/main/utils/install.sh)
 ### git
 
 - vim-fugitive <https://github.com/tpope/vim-fugitive>
+- nvim-blamer.lua <https://github.com/ttys3/nvim-blamer.lua>
 
 ### editor
 
