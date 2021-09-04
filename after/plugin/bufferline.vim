@@ -11,6 +11,7 @@ lua << EOF
         return "("..count..")"
       end,
       show_close_icon = false,
+      offsets = {{filetype = "NvimTree", text = "File Explorer", text_align = "center"}},
       sort_by = function(buffer_a, buffer_b)
       -- add custom logic
       return buffer_a.ordinal < buffer_b.ordinal

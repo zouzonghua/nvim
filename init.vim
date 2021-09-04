@@ -9,7 +9,6 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'hoob3rt/lualine.nvim'
     Plug 'glepnir/dashboard-nvim'
     Plug 'akinsho/bufferline.nvim'
-    Plug 'kyazdani42/nvim-web-devicons'
 
     " markdown
     Plug 'dhruvasagar/vim-table-mode'
@@ -30,9 +29,8 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'kassio/neoterm'
 
     " file-explorer
-    Plug 'kristijanhusak/defx-git'
-    Plug 'kristijanhusak/defx-icons'
-    Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
+    Plug 'kyazdani42/nvim-tree.lua'
+    Plug 'kyazdani42/nvim-web-devicons'
 
     " search
     Plug 'nvim-telescope/telescope.nvim'
@@ -72,7 +70,7 @@ filetype plugin on    " 根据文件类型载入插件
 " file encoding
 "--------------
 set encoding=utf-8
-scriptencoding utf-8
+" scriptencoding utf-8
 
 "--------------
 " key mapping
