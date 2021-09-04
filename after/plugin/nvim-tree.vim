@@ -1,3 +1,4 @@
+try
 let g:nvim_tree_width = 35 "30 by default, can be width_in_columns or 'width_in_percent%'
 let g:nvim_tree_ignore = [ '.git', 'node_modules', '.cache' ] "empty by default
 let g:nvim_tree_gitignore = 1 "0 by default
@@ -96,3 +97,6 @@ lua <<EOF
       { key = "g?",                           cb = tree_cb("toggle_help") },
     }
 EOF
+
+catch
+endtry
