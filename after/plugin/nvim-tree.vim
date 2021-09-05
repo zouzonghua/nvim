@@ -3,7 +3,7 @@ let g:nvim_tree_width = 35 "30 by default, can be width_in_columns or 'width_in_
 let g:nvim_tree_ignore = [ '.git', 'node_modules', '.cache' ] "empty by default
 let g:nvim_tree_gitignore = 1 "0 by default
 
-let g:nvim_tree_indent_markers = 1 "0 by default, this option shows indent markers when folders are open
+let g:nvim_tree_indent_markers = 0 "0 by default, this option shows indent markers when folders are open
 let g:nvim_tree_hide_dotfiles = 1 "0 by default, this option hides files and folders starting with a dot `.`
 let g:nvim_tree_lsp_diagnostics = 0 "0 by default, will show lsp diagnostics in the signcolumn. See :help nvim_tree_lsp_diagnostics
 
