@@ -30,6 +30,7 @@ sh <(curl -L https://github.com/zouzonghua/nvim/raw/main/utils/install.sh)
 - lualine.nvim <https://github.com/hoob3rt/lualine.nvim>
 - dashboard-nvim <https://github.com/glepnir/dashboard-nvim>
 - bufferline.nvim <https://github.com/akinsho/bufferline.nvim>
+- nvim-web-devicons <https://github.com/kyazdani42/nvim-web-devicons>
 
 ### markdown
 
@@ -56,8 +57,9 @@ sh <(curl -L https://github.com/zouzonghua/nvim/raw/main/utils/install.sh)
 
 ### file-explorer
 
-- nvim-tree.lua <https://github.com/kyazdani42/nvim-tree.lua>
-- nvim-web-devicons <https://github.com/kyazdani42/nvim-web-devicons>
+- defx-git <https://github.com/kristijanhusak/defx-git>
+- defx-icons <https://github.com/kristijanhusak/defx-icons>
+- defx.nvim <https://github.com/Shougo/defx.nvim>
 
 ### search
 

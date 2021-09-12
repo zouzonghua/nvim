@@ -9,6 +9,7 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'hoob3rt/lualine.nvim'
     Plug 'glepnir/dashboard-nvim'
     Plug 'akinsho/bufferline.nvim'
+    Plug 'kyazdani42/nvim-web-devicons'
 
     " markdown
     Plug 'dhruvasagar/vim-table-mode'
@@ -30,8 +31,9 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'kassio/neoterm'
 
     " file-explorer
-    Plug 'kyazdani42/nvim-tree.lua'
-    Plug 'kyazdani42/nvim-web-devicons'
+    Plug 'kristijanhusak/defx-git'
+    Plug 'kristijanhusak/defx-icons'
+    Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 
     " search
     Plug 'nvim-telescope/telescope.nvim'

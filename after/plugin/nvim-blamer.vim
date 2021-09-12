@@ -5,7 +5,7 @@ try
 lua <<EOF
 
 require'nvim-blamer'.setup({
-    enable = true,
+    enable = false,
     format = '%committer │ %committer-time-human │ %summary',
 })
 

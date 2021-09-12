@@ -11,6 +11,7 @@ set showcmd                 " 底部显示键入指令
 set nowrap                  " 文本折行
 set fillchars=fold:\ ,vert:\│,eob:\ ,msgsep:‾ " 隐藏波浪线
 
+
 "--------------
 " split window
 "--------------
@@ -36,6 +37,7 @@ set list                     " 显示非可见字符
 " ColorScheme
 "--------------
 "set termguicolors             " enable true color
+autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE " transparent bg
 set t_Co=256                  " 启用256色
 set t_ut=
 syntax on                     " 语法高亮

@@ -99,12 +99,6 @@ local efm_formatters = {
         formatStdin = true,
     },
     lua = { formatCommand = 'lua-format -i', formatStdin = true },
-    vim = {
-        lintCommand = 'vint -',
-        lintStdin = true,
-        lintFormats = { '%f:%l:%c: %m' },
-        lintSource = 'vint',
-    },
 }
 
 nvim_lsp.efm.setup {
@@ -113,7 +107,6 @@ nvim_lsp.efm.setup {
     init_options = { documentFormatting = true },
     filetypes = {
         'lua',
-        'vim',
         'javascript',
         'javascriptreact',
         'typescript',
@@ -127,12 +120,11 @@ nvim_lsp.efm.setup {
             typescript = { efm_formatters.prettier },
             typescriptreact = { efm_formatters.prettier },
             lua = { efm_formatters.stylua },
-            vim = { efm_formatters.vim },
         },
     },
 }
 
-nvim_lsp.flow.setup { on_attach = on_attach }
+-- nvim_lsp.flow.setup { on_attach = on_attach }
 
 nvim_lsp.tsserver.setup {
     on_attach = function(client)
