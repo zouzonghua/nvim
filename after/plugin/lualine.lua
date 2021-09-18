@@ -7,7 +7,7 @@ lualine.setup {
         icons_enabled = true,
         theme = 'codedark',
         section_separators = { '', '' },
-        component_separators = { '', '' },
+        component_separators = { '❱', '❰' },
         disabled_filetypes = {},
     },
     sections = {
