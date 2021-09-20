@@ -6,8 +6,7 @@ call plug#begin('~/.config/nvim/plugged')
   if has('nvim')
 
     " appearance
-    Plug 'hoob3rt/lualine.nvim'
-    Plug 'glepnir/dashboard-nvim'
+    Plug 'https://github.com/shadmansaleh/lualine.nvim'
     Plug 'akinsho/bufferline.nvim'
     Plug 'kyazdani42/nvim-web-devicons'
 
@@ -15,13 +14,8 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'dhruvasagar/vim-table-mode'
     Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 
-    " git
-    Plug 'tpope/vim-fugitive'
-    Plug 'ttys3/nvim-blamer.lua'
-
     " editor
     Plug 'jiangmiao/auto-pairs'
-    Plug 'mg979/vim-visual-multi'
     Plug 'tpope/vim-surround'
     Plug 'editorconfig/editorconfig-vim'
     Plug 'nvim-lua/completion-nvim'
@@ -53,7 +47,7 @@ call plug#end()
 "--------------
 " Settings
 "--------------
-set clipboard=unnamed          " 设置寄存器和系统剪切板通用
+"set clipboard=unnamed          " 设置寄存器和系统剪切板通用
 set noswapfile                 " 不生成缓冲文件
 set nocompatible               " 不与Vi 兼容（采用Vim 自己的操作命令)
 set backspace=indent,eol,start " 解决退格键失效的问题

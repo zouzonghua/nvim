@@ -12,7 +12,7 @@ inoremap <DOWN> <NOP>
 inoremap <LEFT> <NOP>
 inoremap <RIGHT> <NOP>
 
-" 代码换行自定义快捷键 <leader>z
+" 代码换行自定义快捷键 <leader> z
 let g:IsWrapStatus = 0
 nnoremap <leader>z :call ToggleWrap()<cr>
 fun! ToggleWrap()

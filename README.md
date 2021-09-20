@@ -27,8 +27,7 @@ sh <(curl -L https://github.com/zouzonghua/nvim/raw/main/utils/install.sh)
 
 ### appearance
 
-- lualine.nvim <https://github.com/hoob3rt/lualine.nvim>
-- dashboard-nvim <https://github.com/glepnir/dashboard-nvim>
+- lualine.nvim <https://github.com/shadmansaleh/lualine.nvim>
 - bufferline.nvim <https://github.com/akinsho/bufferline.nvim>
 - nvim-web-devicons <https://github.com/kyazdani42/nvim-web-devicons>
 
@@ -37,15 +36,9 @@ sh <(curl -L https://github.com/zouzonghua/nvim/raw/main/utils/install.sh)
 - vim-table-mode <https://github.com/dhruvasagar/vim-table-mode>
 - markdown-preview.nvim <https://github.com/iamcco/markdown-preview.nvim>
 
-### git
-
-- vim-fugitive <https://github.com/tpope/vim-fugitive>
-- nvim-blamer.lua <https://github.com/ttys3/nvim-blamer.lua>
-
 ### editor
 
 - auto-pairs <https://github.com/jiangmiao/auto-pairs>
-- vim-visual-multi <https://github.com/mg979/vim-visual-multi>
 - vim-surround <https://github.com/tpope/vim-surround>
 - editorconfig-vim <https://github.com/editorconfig/editorconfig-vim>
 - completion.nvim <https://github.com/nvim-lua/completion-nvim>

@@ -6,8 +6,8 @@ lualine.setup {
     options = {
         icons_enabled = true,
         theme = 'codedark',
-        section_separators = { '', '' },
-        component_separators = { '❱', '❰' },
+        section_separators = { left = '', right = '' },
+        component_separators = { left = '❱', right = '❰' },
         disabled_filetypes = {},
     },
     sections = {
@@ -17,10 +17,11 @@ lualine.setup {
             {
                 'diff',
                 colored = true, -- displays diff status in color if set to true
-                -- all colors are in format #rrggbb
-                color_added = '#B6CA52', -- changes diff's added foreground color
-                color_modified = '#36A3D9', -- changes diff's modified foreground color
-                color_removed = '#FF3333', -- changes diff's removed foreground color
+                diff_color = {
+                    added = { fg = '#B6CA52' }, -- changes diff's added foreground color
+                    modified = { fg = '36A3D9' }, -- changes diff's modified foreground color
+                    removed = { fg = '#FF3333' }, -- changes diff's removed foreground color
+                },
                 symbols = { added = '+', modified = '~', removed = '-' }, -- changes diff symbols
             },
         },
@@ -56,5 +57,5 @@ lualine.setup {
         lualine_z = {},
     },
     tabline = {},
-    extensions = { 'fugitive', 'nvim-tree' },
+    -- extensions = { 'fugitive', 'nvim-tree' },
 }
