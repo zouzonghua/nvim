@@ -11,6 +11,17 @@ set showcmd                 " 底部显示键入指令
 set nowrap                  " 文本折行
 set fillchars=fold:\ ,vert:\│,eob:\ ,msgsep:‾ " 隐藏波浪线
 
+"--------------
+" foldmethod
+" manual           手工定义折叠
+" indent           更多的缩进表示更高级别的折叠
+" expr             用表达式来定义折叠
+" syntax           用语法高亮来定义折叠
+" diff             对没有更改的文本进行折叠
+" marker           对文中的标志折叠
+"---------------
+set fdm=indent
+
 
 "--------------
 " split window
