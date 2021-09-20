@@ -19,6 +19,10 @@ set fillchars=fold:\ ,vert:\│,eob:\ ,msgsep:‾ " 隐藏波浪线
 " syntax           用语法高亮来定义折叠
 " diff             对没有更改的文本进行折叠
 " marker           对文中的标志折叠
+"
+" keymappings
+" zc 关闭当前 zo 打开当前 zO 打开当前以及嵌套
+" zM 关闭所有 zR 打开所有
 "---------------
 set fdm=indent
 
