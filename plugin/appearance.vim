@@ -24,6 +24,7 @@ set fillchars=fold:\ ,vert:\│,eob:\ ,msgsep:‾ " 隐藏波浪线
 " zc 关闭当前 zo 打开当前 zO 打开当前以及嵌套
 " zM 关闭所有 zR 打开所有
 "---------------
+set foldlevelstart=1       " 折叠层级
 set fdm=indent
 
 

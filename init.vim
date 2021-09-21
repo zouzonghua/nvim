@@ -47,7 +47,7 @@ call plug#end()
 "--------------
 " Settings
 "--------------
-"set clipboard=unnamed          " 设置寄存器和系统剪切板通用
+set clipboard=unnamed          " 设置寄存器和系统剪切板通用
 set noswapfile                 " 不生成缓冲文件
 set nocompatible               " 不与Vi 兼容（采用Vim 自己的操作命令)
 set backspace=indent,eol,start " 解决退格键失效的问题
