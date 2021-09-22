@@ -20,6 +20,7 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'editorconfig/editorconfig-vim'
     Plug 'nvim-lua/completion-nvim'
     Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
+    Plug 'ybian/smartim'
 
     " termial
     Plug 'kassio/neoterm'
@@ -61,7 +62,6 @@ set hidden                     " Vim 会在切换 Buffer 的时候检测当前 B
 filetype on           " 识别文件类型
 filetype indent on    " 根据文件类型进行缩放
 filetype plugin on    " 根据文件类型载入插件
-
 
 "--------------
 " file encoding

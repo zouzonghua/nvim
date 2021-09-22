@@ -43,6 +43,7 @@ sh <(curl -L https://github.com/zouzonghua/nvim/raw/main/utils/install.sh)
 - editorconfig-vim <https://github.com/editorconfig/editorconfig-vim>
 - completion.nvim <https://github.com/nvim-lua/completion-nvim>
 - nvim-treesitter <https://github.com/nvim-treesitter/nvim-treesitter>
+- smartim <https://github.com/ybian/smartim>
 
 ### termial
 
