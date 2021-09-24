@@ -1,5 +1,5 @@
 if !exists('g:loaded_lspsaga')
-  echom 'Not loaded treesitter'
+  echom 'Not loaded lspsaga'
   finish
 endif
 
@@ -16,19 +16,19 @@ saga.init_lsp_saga {
 
 EOF
 
-nnoremap <silent> K <cmd>lua require('lspsaga.hover').render_hover_doc()<CR>
-nnoremap <silent> <C-f> <cmd>lua require('lspsaga.action').smart_scroll_with_saga(1)<CR>
-nnoremap <silent> <C-b> <cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1)<CR>
+ nnoremap <silent> K <cmd>lua require('lspsaga.hover').render_hover_doc()<CR>
+ nnoremap <silent> <C-f> <cmd>lua require('lspsaga.action').smart_scroll_with_saga(1)<CR>
+ nnoremap <silent> <C-b> <cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1)<CR>
 
-nnoremap <silent> gd :Lspsaga preview_definition<CR>
-nnoremap <silent> gh <Cmd>Lspsaga lsp_finder<CR>
+ nnoremap <silent> gd :Lspsaga preview_definition<CR>
+ nnoremap <silent> gh <Cmd>Lspsaga lsp_finder<CR>
+ nnoremap <silent><leader>fr <cmd>Telescope lsp_references<cr>
 
-nnoremap <silent> <leader>cd :Lspsaga show_line_diagnostics<CR>
+ nnoremap <silent> [e :Lspsaga diagnostic_jump_prev<CR>
+ nnoremap <silent> ]e :Lspsaga diagnostic_jump_next<CR>
 
-nnoremap <silent> [e :Lspsaga diagnostic_jump_prev<CR>
-nnoremap <silent> ]e :Lspsaga diagnostic_jump_next<CR>
+ nnoremap <silent><leader>rn :Lspsaga rename<CR>
 
-nnoremap <silent>gr :Lspsaga rename<CR>
+ nnoremap <silent><leader>ca :Lspsaga code_action<CR>
+ vnoremap <silent><leader>ca :<C-U>Lspsaga range_code_action<CR>
 
-nnoremap <silent><leader>ca :Lspsaga code_action<CR>
-vnoremap <silent><leader>ca :<C-U>Lspsaga range_code_action<CR>
