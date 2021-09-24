@@ -14,10 +14,10 @@ require'nvim-treesitter.configs'.setup {
     disable = {},
   },
   ensure_installed = {
-    "javascript",
-    "tsx",
     "json",
     "yaml",
+    "tsx",
+    "javascript",
     "html",
     "scss"
   },
