@@ -25,3 +25,6 @@ fun! ToggleWrap()
     endif
 endfun
 
+" 格式化 json 格式为 ts 接口 npm install -g quicktype
+ nnoremap <silent><leader>jt :.!quicktype -l ts --just-types --top-level Root<CR>
+ vnoremap <silent><leader>jt :'<,'>.!quicktype -l ts --just-types --top-level Root<CR>
