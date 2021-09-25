@@ -20,13 +20,39 @@ lua << EOF
   }
 EOF
 
-  " These commands will navigate through buffers in order regardless of which mode you are using
-  " e.g. if you change the order of buffers :bnext and :bprevious will not respect the custom ordering
   nnoremap <silent><C-l> :BufferLineCycleNext<CR>
   nnoremap <silent><C-h> :BufferLineCyclePrev<CR>
-  nnoremap <silent><C-x> :bd<CR>
+  nnoremap <silent>]b :BufferLineCycleNext<CR>
+  nnoremap <silent>[b :BufferLineCyclePrev<CR>
+
+  function! s:close_buffer()
+    let window_counter = 0
+    windo let window_counter = window_counter + 1
+    " echo window_counter
+    " 判断窗口数量
+    if window_counter == 1
+        :bd
+    else
+       Defx -buffer-name=tab`tabpagenr()`
+       :bd
+       Defx -buffer-name=tab`tabpagenr()`
+       :wincmd l
+    endif
+  endfunction
+
+  nnoremap <silent><c-x> <cmd>call <SID>close_buffer()<CR>
   nnoremap <silent><Leader>hh :BufferLineCloseLeft<CR>
   nnoremap <silent><Leader>ll :BufferLineCloseRight<CR>
+
+  nnoremap <silent><leader>1 <Cmd>BufferLineGoToBuffer 1<CR>
+  nnoremap <silent><leader>2 <Cmd>BufferLineGoToBuffer 2<CR>
+  nnoremap <silent><leader>3 <Cmd>BufferLineGoToBuffer 3<CR>
+  nnoremap <silent><leader>4 <Cmd>BufferLineGoToBuffer 4<CR>
+  nnoremap <silent><leader>5 <Cmd>BufferLineGoToBuffer 5<CR>
+  nnoremap <silent><leader>6 <Cmd>BufferLineGoToBuffer 6<CR>
+  nnoremap <silent><leader>7 <Cmd>BufferLineGoToBuffer 7<CR>
+  nnoremap <silent><leader>8 <Cmd>BufferLineGoToBuffer 8<CR>
+  nnoremap <silent><leader>9 <Cmd>BufferLineGoToBuffer 9<CR>
 
 catch
 endtry
