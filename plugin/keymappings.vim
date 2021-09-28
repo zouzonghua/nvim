@@ -26,5 +26,8 @@ fun! ToggleWrap()
 endfun
 
 " 格式化 json 格式为 ts 接口 npm install -g quicktype
- nnoremap <silent><leader>jt :.!quicktype -l ts --just-types --top-level Root<CR>
- vnoremap <silent><leader>jt :'<,'>.!quicktype -l ts --just-types --top-level Root<CR>
+nnoremap <silent><leader>jt :.!quicktype -l ts --just-types --top-level Root<CR>
+vnoremap <silent><leader>jt :'<,'>.!quicktype -l ts --just-types --top-level Root<CR>
+
+" https://vi.stackexchange.com/questions/104/how-can-i-see-the-full-path-of-the-current-file
+autocmd Filetype typescriptreact nnoremap <leader>f :!eslint_d '%:p' --fix<CR>`F
