@@ -36,7 +36,6 @@ call plug#begin('~/.config/nvim/plugged')
 
     " lsp
     Plug 'neovim/nvim-lspconfig'
-    Plug 'glepnir/lspsaga.nvim'
 
     " colorscheme
     Plug 'tomasiser/vim-code-dark'

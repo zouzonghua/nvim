@@ -63,7 +63,6 @@ sh <(curl -L https://github.com/zouzonghua/nvim/raw/main/utils/install.sh)
 ### lsp
 
 - nvim-lspconfig <https://github.com/neovim/nvim-lspconfig>
-- lspsaga.nvim <https://github.com/glepnir/lspsaga.nvim>
 
 ### colorscheme
 

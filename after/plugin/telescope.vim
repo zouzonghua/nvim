@@ -4,6 +4,7 @@ nnoremap <leader>ff <cmd>Telescope find_files prompt_prefix=🔍<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep prompt_prefix=🔍<cr>
 nnoremap <leader>fb <cmd>Telescope buffers prompt_prefix=🔍<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags prompt_prefix=🔍<cr>
+nnoremap <silent><leader>fr <cmd>Telescope lsp_references<cr>
 
 lua << EOF
 local actions = require('telescope.actions')
