@@ -12,9 +12,8 @@
   inoremap <LEFT> <NOP>
   inoremap <RIGHT> <NOP>
 
-" 代码换行自定义快捷键 <leader> z
+" toogle wrap
 let g:isWrapStatus = 0
-nnoremap <leader>z :call ToggleWrap()<cr>
 fun! ToggleWrap()
     if g:isWrapStatus == 0
         exe ':set wrap'
@@ -24,10 +23,15 @@ fun! ToggleWrap()
         let g:isWrapStatus = 0
     endif
 endfun
+nnoremap <leader>z :call ToggleWrap()<cr>
 
-" 格式化 json 格式为 ts 接口 npm install -g quicktype
+" formart json ts interface npm install -g quicktype
 nnoremap <silent><leader>jt :.!quicktype -l ts --just-types --top-level Root<CR>
 vnoremap <silent><leader>jt :'<,'>.!quicktype -l ts --just-types --top-level Root<CR>
 
+" eslint_d fix
 " https://vi.stackexchange.com/questions/104/how-can-i-see-the-full-path-of-the-current-file
-autocmd Filetype typescriptreact nnoremap <leader>f :!eslint_d '%:p' --fix<CR>`F
+autocmd Filetype typescriptreact nnoremap <leader>e :!eslint_d '%:p' --fix<CR>`F
+autocmd Filetype typescript nnoremap <leader>e :!eslint_d '%:p' --fix<CR>`F
+autocmd Filetype javascriptreact nnoremap <leader>e :!eslint_d '%:p' --fix<CR>`F
+autocmd Filetype javascript nnoremap <leader>e :!eslint_d '%:p' --fix<CR>`F
