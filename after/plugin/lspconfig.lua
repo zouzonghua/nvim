@@ -44,37 +44,6 @@ local on_attach = function(client, bufnr)
     buf_set_keymap('n', ']e', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', opts)
     buf_set_keymap('n', '<space>q', '<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>', opts)
     buf_set_keymap('n', '<leader>p', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
-
-    require('completion').on_attach(client, bufnr)
-
-    -- protocol.SymbolKind = { }
-    protocol.CompletionItemKind = {
-        '', -- Text
-        '', -- Method
-        '', -- Function
-        '', -- Constructor
-        '1', -- Field
-        '', -- Variable
-        '', -- Class
-        'ﰮ', -- Interface
-        '', -- Module
-        '', -- Property
-        '', -- Unit
-        '', -- Value
-        '', -- Enum
-        '', -- Keyword
-        '﬌', -- Snippet
-        '', -- Color
-        '', -- File
-        '', -- Reference
-        '', -- Folder
-        '', -- EnumMember
-        '', -- Constant
-        '', -- Struct
-        '', -- Event
-        'ﬦ', -- Operator
-        '', -- TypeParameter
-    }
 end
 
 local efm_formatters = {

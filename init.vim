@@ -16,9 +16,7 @@ call plug#begin('~/.config/nvim/plugged')
 
     " editor
     Plug 'jiangmiao/auto-pairs'
-    Plug 'tpope/vim-surround'
     Plug 'editorconfig/editorconfig-vim'
-    Plug 'nvim-lua/completion-nvim'
     Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
     Plug 'ybian/smartim'
 
@@ -36,6 +34,12 @@ call plug#begin('~/.config/nvim/plugged')
 
     " lsp
     Plug 'neovim/nvim-lspconfig'
+    Plug 'hrsh7th/cmp-nvim-lsp'
+    Plug 'hrsh7th/nvim-cmp'
+
+    " luasnip
+    Plug 'saadparwaiz1/cmp_luasnip'
+    Plug 'L3MON4D3/LuaSnip'
 
     " colorscheme
     Plug 'tomasiser/vim-code-dark'

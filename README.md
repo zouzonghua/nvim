@@ -39,9 +39,7 @@ sh <(curl -L https://github.com/zouzonghua/nvim/raw/main/utils/install.sh)
 ### editor
 
 - auto-pairs <https://github.com/jiangmiao/auto-pairs>
-- vim-surround <https://github.com/tpope/vim-surround>
 - editorconfig-vim <https://github.com/editorconfig/editorconfig-vim>
-- completion.nvim <https://github.com/nvim-lua/completion-nvim>
 - nvim-treesitter <https://github.com/nvim-treesitter/nvim-treesitter>
 - smartim <https://github.com/ybian/smartim>
 
@@ -63,6 +61,13 @@ sh <(curl -L https://github.com/zouzonghua/nvim/raw/main/utils/install.sh)
 ### lsp
 
 - nvim-lspconfig <https://github.com/neovim/nvim-lspconfig>
+- cmp-nvim-lsp <https://github.com/hrsh7th/cmp-nvim-lsp>
+- nvim-cmp <https://github.com/hrsh7th/nvim-cmp>
+
+### luasnip
+
+- cmp_luasnip <https://github.com/saadparwaiz1/cmp_luasnip>
+- LuaSnip <https://github.com/L3MON4D3/LuaSnip>
 
 ### colorscheme
 
