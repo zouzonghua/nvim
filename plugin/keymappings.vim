@@ -36,16 +36,3 @@ autocmd Filetype typescript nnoremap <leader>e :!eslint_d '%:p' --fix<CR>`F
 autocmd Filetype javascriptreact nnoremap <leader>e :!eslint_d '%:p' --fix<CR>`F
 autocmd Filetype javascript nnoremap <leader>e :!eslint_d '%:p' --fix<CR>`F
 
-" lsp
-nnoremap <silent> gd <cmd>lua vim.lsp.buf.definition()<CR>
-nnoremap <silent> gD <cmd>lua vim.lsp.buf.declaration()<CR>
-nnoremap <silent> gr <cmd>Telescope lsp_references<CR>
-" code action
-nnoremap <silent><leader>ca <cmd>lua vim.lsp.buf.code_action()<CR>
-" hover doc and scroll
-nnoremap <silent> K :call <SID>show_documentation()<CR>
-" rename
-nnoremap <silent> <leader>rn <cmd>lua vim.lsp.buf.rename()<CR>
-" jump error
-nnoremap <silent> [e <cmd>lua vim.lsp.diagnostic.goto_prev()<CR>
-nnoremap <silent> ]e <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
