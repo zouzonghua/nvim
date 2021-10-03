@@ -4,7 +4,7 @@ if not status then
     return
 end
 
--- need install `npm i -g typescript typescript-language-server vscode-langservers-extracted diagnostic-languageserver eslint_d prettier`
+-- need install `npm i -g typescript typescript-language-server vscode-langservers-extracted diagnostic-languageserver eslint_d prettier stylelint`
 
 local nvim_lsp = require 'lspconfig'
 local protocol = require 'vim.lsp.protocol'
@@ -34,7 +34,12 @@ local on_attach = function(client, bufnr)
     buf_set_keymap('n', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
     buf_set_keymap('n', '<space>wa', '<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>', opts)
     buf_set_keymap('n', '<space>wr', '<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>', opts)
-    buf_set_keymap('n', '<space>wl', '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>', opts)
+    buf_set_keymap(
+        'n',
+        '<space>wl',
+        '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>',
+        opts
+    )
     buf_set_keymap('n', '<space>D', '<cmd>lua vim.lsp.buf.type_definition()<CR>', opts)
     buf_set_keymap('n', '<space>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
     buf_set_keymap('n', '<space>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
@@ -102,7 +107,6 @@ nvim_lsp.diagnosticls.setup {
         'less',
         'scss',
         'markdown',
-        'pandoc',
     },
     init_options = {
         linters = {
@@ -129,40 +133,60 @@ nvim_lsp.diagnosticls.setup {
                 },
                 securities = { [2] = 'error', [1] = 'warning' },
             },
+            stylelint = {
+                sourceName = 'stylelint',
+                command = 'stylelint',
+                args = { '--formatter', 'compact', '%filepath' },
+                rootPatterns = { '.git' },
+                debounce = 100,
+                formatPattern = {
+                    [[: line (\d+), col (\d+), (warning|error) - (.+?) \((.+)\)]],
+                    {
+                        line = 1,
+                        column = 2,
+                        security = 3,
+                        message = { 4, ' [', 5, ']' },
+                    },
+                },
+                securities = {
+                    warning = 'warning',
+                    error = 'error',
+                },
+            },
         },
         filetypes = {
             javascript = 'eslint',
             javascriptreact = 'eslint',
             typescript = 'eslint',
             typescriptreact = 'eslint',
+            scss = 'stylelint',
+            css = 'stylelint',
         },
         formatters = {
             eslint_d = {
                 command = 'eslint_d',
-                args = {
-                    '--stdin',
-                    '--stdin-filename',
-                    '%filename',
-                    '--fix-to-stdout',
-                },
-                rootPatterns = { '.git' },
+                args = { '--stdin', '--fix-to-stdout', '--stdin-filename', '%filepath' },
             },
             prettier = {
                 command = 'prettier',
                 args = { '--stdin-filepath', '%filename' },
             },
+            stylelint = {
+                command = 'stylelint',
+                args = { '--fix', '--stdin', '--stdin-filename', '%filepath' },
+            },
         },
         formatFiletypes = {
-            css = 'prettier',
-            javascript = 'eslint_d',
-            javascriptreact = 'eslint_d',
-            json = 'prettier',
-            scss = 'prettier',
-            less = 'prettier',
-            typescript = 'eslint_d',
-            typescriptreact = 'eslint_d',
+            html = 'prettier',
             json = 'prettier',
             markdown = 'prettier',
+            css = 'stylelint',
+            scss = 'stylelint',
+            less = 'stylelint',
+            javascript = 'prettier',
+            javascriptreact = 'prettier',
+            typescript = 'prettier',
+            typescriptreact = 'prettier',
         },
     },
 }

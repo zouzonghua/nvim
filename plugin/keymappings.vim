@@ -31,8 +31,9 @@ vnoremap <silent><leader>jt :'<,'>.!quicktype -l ts --just-types --top-level Roo
 
 " eslint_d fix
 " https://vi.stackexchange.com/questions/104/how-can-i-see-the-full-path-of-the-current-file
-autocmd Filetype typescriptreact nnoremap <leader>e :!eslint_d '%:p' --fix<CR>`F
-autocmd Filetype typescript nnoremap <leader>e :!eslint_d '%:p' --fix<CR>`F
-autocmd Filetype javascriptreact nnoremap <leader>e :!eslint_d '%:p' --fix<CR>`F
-autocmd Filetype javascript nnoremap <leader>e :!eslint_d '%:p' --fix<CR>`F
+" autocmd Filetype typescriptreact nnoremap <leader>e :!eslint_d '%:p' --fix<CR>`F
+" autocmd Filetype typescript nnoremap <leader>e :!eslint_d '%:p' --fix<CR>`F
+" autocmd Filetype javascriptreact nnoremap <leader>e :!eslint_d '%:p' --fix<CR>`F
+" autocmd Filetype javascript nnoremap <leader>e :!eslint_d '%:p' --fix<CR>`F
 
+nnoremap <leader>e mF:%!eslint_d --stdin --fix-to-stdout --stdin-filename %<CR>`F
