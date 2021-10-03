@@ -1,7 +1,7 @@
 # nvim
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/zouzonghua/nvim/blob/main/LICENSE)
 
 my neovim setttings
-
 ## installation
 
 ### manual
