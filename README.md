@@ -2,6 +2,9 @@
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/zouzonghua/nvim/blob/main/LICENSE)
 
 my neovim setttings
+
+![shreenshot](./screenshot/202110051235.png)
+
 ## installation
 
 ### manual
