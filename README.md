@@ -30,7 +30,7 @@ sh <(curl -L https://github.com/zouzonghua/nvim/raw/main/utils/install.sh)
 
 ### appearance
 
-- lualine.nvim <https://github.com/shadmansaleh/lualine.nvim>
+- lualine.nvim <https://github.com/nvim-lualine/lualine.nvim>
 - bufferline.nvim <https://github.com/akinsho/bufferline.nvim>
 - nvim-web-devicons <https://github.com/kyazdani42/nvim-web-devicons>
 

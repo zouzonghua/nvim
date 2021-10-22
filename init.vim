@@ -6,7 +6,7 @@ call plug#begin('~/.config/nvim/plugged')
   if has('nvim')
 
     " appearance
-    Plug 'https://github.com/shadmansaleh/lualine.nvim'
+    Plug 'nvim-lualine/lualine.nvim'
     Plug 'akinsho/bufferline.nvim'
     Plug 'kyazdani42/nvim-web-devicons'
 
