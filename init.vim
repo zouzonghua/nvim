@@ -58,6 +58,7 @@ set backspace=indent,eol,start " 解决退格键失效的问题
 set updatetime=100             " 刷新时间
 set mouse=a                    " 支持使用鼠标
 set hidden                     " Vim 会在切换 Buffer 的时候检测当前 Buffer 是否保存，如果还未保存，则会以打开一个新 Window 的形式打开另一个 Buffer
+set completeopt=menuone,noselect " Set completeopt to have a better completion experience
 
 "--------------
 " Filetype and Encoding

@@ -1,12 +1,13 @@
-" Set completeopt to have a better completion experience
-set completeopt=menuone,noselect
+local status, luasnip = pcall(require, 'luasnip')
+if not status then
+    return
+end
 
-lua <<EOF
--- luasnip setup
-local luasnip = require 'luasnip'
+local status, cmp = pcall(require, 'cmp')
+if not status then
+    return
+end
 
--- nvim-cmp setup
-local cmp = require 'cmp'
 cmp.setup {
   snippet = {
     expand = function(args)
@@ -48,4 +49,3 @@ cmp.setup {
     { name = 'luasnip' },
   },
 }
-EOF
