@@ -34,6 +34,9 @@ sh <(curl -L https://github.com/zouzonghua/nvim/raw/main/utils/install.sh)
 - bufferline.nvim <https://github.com/akinsho/bufferline.nvim>
 - nvim-web-devicons <https://github.com/kyazdani42/nvim-web-devicons>
 
+### git
+- nvim-blamer <https://github.com/ttys3/nvim-blamer.lua>
+
 ### markdown
 
 - vim-table-mode <https://github.com/dhruvasagar/vim-table-mode>
