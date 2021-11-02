@@ -8,7 +8,7 @@ lualine.setup {
         theme = 'codedark',
         section_separators = { left = '', right = '' },
         component_separators = { left = '❱', right = '❰' },
-        disabled_filetypes = {'defx'},
+        disabled_filetypes = { 'defx' },
     },
     sections = {
         lualine_a = { 'mode' },
@@ -37,6 +37,7 @@ lualine.setup {
                 },
             },
             'encoding',
+            { 'fileformat', icons_enabled = true },
             'filetype',
         },
         lualine_y = { 'progress' },
