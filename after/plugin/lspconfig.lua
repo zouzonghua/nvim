@@ -31,7 +31,7 @@ local on_attach = function(client, bufnr)
     buf_set_keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
     buf_set_keymap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
     buf_set_keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
-    buf_set_keymap('n', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
+    -- buf_set_keymap('n', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
     buf_set_keymap('n', '<space>wa', '<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>', opts)
     buf_set_keymap('n', '<space>wr', '<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>', opts)
     buf_set_keymap(
@@ -48,7 +48,7 @@ local on_attach = function(client, bufnr)
     buf_set_keymap('n', '[e', '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>', opts)
     buf_set_keymap('n', ']e', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', opts)
     buf_set_keymap('n', '<space>q', '<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>', opts)
-    buf_set_keymap('n', '<leader>p', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
+    buf_set_keymap('n', '<leader>fm', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
 end
 
 local efm_formatters = {
@@ -67,20 +67,20 @@ nvim_lsp.efm.setup {
     filetypes = {
         'lua',
         'html',
-        'javascript',
-        'javascriptreact',
-        'typescript',
-        'typescriptreact',
+       -- 'javascript',
+       -- 'javascriptreact',
+       -- 'typescript',
+       -- 'typescriptreact',
     },
     settings = {
         rootMarkers = { '.git/' },
         languages = {
-            html = { efm_formatters.orettier },
-            javascript = { efm_formatters.prettier },
-            javascriptreact = { efm_formatters.prettier },
-            typescript = { efm_formatters.prettier },
-            typescriptreact = { efm_formatters.prettier },
             lua = { efm_formatters.stylua },
+            html = { efm_formatters.orettier },
+            -- javascript = { efm_formatters.prettier },
+            -- javascriptreact = { efm_formatters.prettier },
+            -- typescript = { efm_formatters.prettier },
+            -- typescriptreact = { efm_formatters.prettier },
         },
     },
 }
@@ -195,8 +195,8 @@ nvim_lsp.diagnosticls.setup {
 vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(
     vim.lsp.diagnostic.on_publish_diagnostics,
     {
+        signs = false,
         underline = true,
-        -- This sets the spacing and the prefix, obviously.
         virtual_text = { spacing = 4, prefix = '' },
     }
 )
