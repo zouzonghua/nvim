@@ -2,15 +2,18 @@
 " key mapping
 "===============================================================================
   " disabled arrow
-    noremap <UP> <NOP>
-    noremap <DOWN> <NOP>
-    noremap <LEFT> <NOP>
-    noremap <RIGHT> <NOP>
-    inoremap <UP> <NOP>
-    inoremap <DOWN> <NOP>
-    inoremap <LEFT> <NOP>
-    inoremap <RIGHT> <NOP>
-
+  noremap <UP> <NOP>
+  noremap <DOWN> <NOP>
+  noremap <LEFT> <NOP>
+  noremap <RIGHT> <NOP>
+  inoremap <UP> <NOP>
+  inoremap <DOWN> <NOP>
+  inoremap <LEFT> <NOP>
+  inoremap <RIGHT> <NOP>
+  " move up
+  nnoremap <silent><C-k> :m -2<CR>
+  " move down
+  nnoremap <silent><C-j> :m +1<CR>
   " toogle wrap
   let g:isWrapStatus = 0
   fun! ToggleWrap()
@@ -24,15 +27,9 @@
   endfun
   nnoremap <leader>z :call ToggleWrap()<cr>
 
-  " formart json ts interface npm install -g quicktype
-  nnoremap <silent><leader>jt :.!quicktype -l ts --just-types --top-level Root<CR>
-  vnoremap <silent><leader>jt :'<,'>.!quicktype -l ts --just-types --top-level Root<CR>
+  " eslint_d format
+  autocmd Filetype typescriptreact nnoremap <leader>fe mF:%!eslint_d --stdin --fix-to-stdout --stdin-filename %<CR>`F
+  autocmd Filetype javascriptreact nnoremap <leader>fe mF:%!eslint_d --stdin --fix-to-stdout --stdin-filename %<CR>`F
+  autocmd Filetype typescript nnoremap <leader>fe mF:%!eslint_d --stdin --fix-to-stdout --stdin-filename %<CR>`F
+  autocmd Filetype javascript nnoremap <leader>fe mF:%!eslint_d --stdin --fix-to-stdout --stdin-filename %<CR>`F
 
-  " eslint_d fix
-  " https://vi.stackexchange.com/questions/104/how-can-i-see-the-full-path-of-the-current-file
-  " autocmd Filetype typescriptreact nnoremap <leader>e :!eslint_d '%:p' --fix<CR>`F
-  " autocmd Filetype typescript nnoremap <leader>e :!eslint_d '%:p' --fix<CR>`F
-  " autocmd Filetype javascriptreact nnoremap <leader>e :!eslint_d '%:p' --fix<CR>`F
-  " autocmd Filetype javascript nnoremap <leader>e :!eslint_d '%:p' --fix<CR>`F
-
-  nnoremap <leader>e mF:%!eslint_d --stdin --fix-to-stdout --stdin-filename %<CR>`F
