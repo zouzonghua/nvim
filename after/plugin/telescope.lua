@@ -9,6 +9,7 @@ local N = { noremap = true, silent= true }
 
 telescope.setup{
   defaults = {
+    prompt_prefix = "",
     mappings = {
       n = {
         ["q"] = actions.close
