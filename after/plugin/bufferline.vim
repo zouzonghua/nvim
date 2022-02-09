@@ -28,15 +28,17 @@ EOF
   function! s:close_buffer()
     let window_counter = 0
     windo let window_counter = window_counter + 1
-    " echo window_counter
+    echo window_counter
     " 判断窗口数量
     if window_counter == 1
-        :bd
-    else
+       :bd
+    elseif window_counter == 2
        Defx -buffer-name=tab`tabpagenr()`
        :bd
        Defx -buffer-name=tab`tabpagenr()`
        :wincmd l
+    else
+      :q
     endif
   endfunction
 

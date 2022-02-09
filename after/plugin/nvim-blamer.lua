@@ -4,7 +4,7 @@ if not status then
 end
 
 nvimBlamer.setup {
-    enable = true, -- you must set this to true in order to show the blame info
+    enable = false, -- you must set this to true in order to show the blame info
     prefix = '   ', -- you can cusomize it to any thing, unicode emoji, even disable it, just set to empty lua string
     format = '🙋%committer ⏰ %committer-time-human • %summary',
     auto_hide = false, -- set this to true will enable delay hide even you do not have the cursor moved
