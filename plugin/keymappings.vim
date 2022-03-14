@@ -28,8 +28,8 @@
   nnoremap <leader>z :call ToggleWrap()<cr>
 
   " eslint_d format
-  autocmd Filetype typescriptreact nnoremap <leader>fe mF:%!eslint_d --stdin --fix-to-stdout --stdin-filename %<CR>`F
-  autocmd Filetype javascriptreact nnoremap <leader>fe mF:%!eslint_d --stdin --fix-to-stdout --stdin-filename %<CR>`F
-  autocmd Filetype typescript nnoremap <leader>fe mF:%!eslint_d --stdin --fix-to-stdout --stdin-filename %<CR>`F
-  autocmd Filetype javascript nnoremap <leader>fe mF:%!eslint_d --stdin --fix-to-stdout --stdin-filename %<CR>`F
+  autocmd Filetype typescriptreact noremap <leader>fe mF:%!eslint_d --stdin --fix-to-stdout --stdin-filename %<CR>`F
+  autocmd Filetype javascriptreact noremap <leader>fe mF:%!eslint_d --stdin --fix-to-stdout --stdin-filename %<CR>`F
+  autocmd Filetype typescript noremap <leader>fe mF:%!eslint_d --stdin --fix-to-stdout --stdin-filename %<CR>`F
+  autocmd Filetype javascript noremap <leader>fe mF:%!eslint_d --stdin --fix-to-stdout --stdin-filename %<CR>`F
 
