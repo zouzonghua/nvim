@@ -1,3 +1,3 @@
 local vim = vim
 
-vim.api.nvim_exec([[autocmd Filetype markdown nmap <C-p> <Plug>MarkdownPreviewToggle]], false)
+vim.api.nvim_exec([[autocmd Filetype markdown nmap <leader>mp <Plug>MarkdownPreviewToggle]], false)
