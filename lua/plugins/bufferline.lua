@@ -1,8 +1,13 @@
+local status, bufferline = pcall(require, 'bufferline')
+if not status then
+    return { config = nil }
+end
+
 local M = {}
 
 function M.config()
     _G.zzh = {}
-    require('bufferline').setup {
+    bufferline.setup {
         options = {
             numbers = function(opts)
                 return string.format('%s.', opts.ordinal, opts.id)

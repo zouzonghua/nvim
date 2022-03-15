@@ -1,7 +1,12 @@
+local status, lualine = pcall(require, 'lualine')
+if not status then
+    return { config = nil }
+end
+
 local M = {}
 
 function M.config()
-    require('lualine').setup {
+    lualine.setup {
         options = {
             icons_enabled = true,
             theme = 'codedark',
