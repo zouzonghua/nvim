@@ -16,7 +16,7 @@ local disabled_bilt_ins = {
     'logipat',
     'rrhelper',
     'spellfile_plugin',
-    'matchit'
+    'matchit',
 }
 
 for _, plugin in pairs(disabled_bilt_ins) do

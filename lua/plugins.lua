@@ -15,8 +15,10 @@ if fn.empty(fn.glob(install_path)) > 0 then
 end
 
 return require('packer').startup(function(use)
-    -- Packer can manage itself
-    use 'wbthomason/packer.nvim'
+    -- PluginManager
+    use {
+        'wbthomason/packer.nvim',
+    }
 
     -- Appearance
     use {
@@ -103,13 +105,20 @@ return require('packer').startup(function(use)
         'hrsh7th/nvim-cmp',
         config = require('plugins.nvim-cmp').config and require('plugins.nvim-cmp').config(),
     }
-    use { 'hrsh7th/cmp-nvim-lsp', requires = 'hrsh7th/nvim-cmp' }
+    use {
+        'hrsh7th/cmp-nvim-lsp',
+        requires = 'hrsh7th/nvim-cmp',
+    }
 
     -- Luasnip
-    use { 'L3MON4D3/LuaSnip' }
+    use {
+        'L3MON4D3/LuaSnip',
+    }
 
     -- Colorscheme
-    use { 'tomasiser/vim-code-dark' }
+    use {
+        'tomasiser/vim-code-dark',
+    }
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins

@@ -1,3 +1,4 @@
-local themes = require('themes')
+local themes = require 'themes'
 
-themes.switchColorScheme('codedark')
+
+themes.switchColorScheme 'codedark'

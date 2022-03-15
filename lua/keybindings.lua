@@ -1,4 +1,4 @@
-local utils = require('utils')
+local utils = require 'utils'
 
 -- telescope
 utils.map('n', '<leader>ff', ':lua require("telescope.builtin").find_files()<cr>', N)
@@ -24,6 +24,7 @@ utils.map('c', '<M-b>', '<S-Left>')
 -- utils.map('i', '<C-l>', '<Right>')
 
 -- move selected line
-utils.map("v", "J", [[:m '>+1<CR>gv=gv]])
-utils.map("v", "K", [[:m '<-2<CR>gv=gv]])
 
+utils.map('v', 'J', [[:m '>+1<CR>gv=gv]])
+
+utils.map('v', 'K', [[:m '<-2<CR>gv=gv]])

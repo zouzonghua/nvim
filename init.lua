@@ -1,5 +1,10 @@
-require('plugins')
-require('settings')
-require('keybindings')
-require('disable_builtins')
-require('colorscheme')
+
+require 'plugins'
+
+require 'settings'
+
+require 'keybindings'
+
+require 'disable_builtins'
+
+require 'colorscheme'
