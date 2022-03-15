@@ -32,10 +32,8 @@ local function close_buffer()
         vim.cmd 'bd'
         vim.cmd 'Defx -buffer-name=tab`tabpagenr()`'
         vim.cmd 'wincmd l'
-        print 'last window'
     else
         vim.cmd 'bd'
-        print 'not last window'
     end
 end
 
@@ -50,6 +48,7 @@ map('n', '<Leader>hh', ':BufferLineCloseLeft<CR>', N)
 _G.zzh.close_buffer = close_buffer
 
 
+--  vim.api.nvim_get_current_buf()
 --   function! s:close_buffer()
 --     let window_counter = 0
 --     windo let window_counter = window_counter + 1
