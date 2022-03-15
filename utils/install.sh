@@ -28,7 +28,7 @@ hash git >/dev/null && /usr/bin/env git clone git@github.com:zouzonghua/nvim.git
 # ln -s $nvim_folder/NERDTreeBookmarks $nerd_tree_bookmarks
 
 # run PlugInstall to install all plugins
-nvim +'PlugInstall --sync' +qa
+nvim +'PackerSync --sync' +qa
 
 echo ""
 echo "\033[0;34mNice! Seems everything is going well.\033[0m"

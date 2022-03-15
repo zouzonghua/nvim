@@ -7,74 +7,62 @@ my neovim setttings
 
 ## installation
 
-### manual
-
-```sh
-cd ~
-git clone https://github.com/zouzonghua/nvim.git .config/nvim
 ```
-
-open nvim, run `:PlugInstall` install plugin
-
-### shell
-
-```
-sh <(curl -L https://github.com/zouzonghua/nvim/raw/main/utils/install.sh)
+sh <(curl -L https://github.com/zouzonghua/nvim/raw/lua/utils/install.sh)
 ```
 
 ## plugin
 
-### plugin-manager
+### PluginManager
 
-- VimPlug <https://github.com/junegunn/vim-plug>
+- packer.nvim <https://github.com/wbthomason/packer.nvim>
 
-### appearance
+### Appearance
 
 - lualine.nvim <https://github.com/nvim-lualine/lualine.nvim>
 - bufferline.nvim <https://github.com/akinsho/bufferline.nvim>
 - nvim-web-devicons <https://github.com/kyazdani42/nvim-web-devicons>
 
-### git
-- nvim-blamer <https://github.com/ttys3/nvim-blamer.lua>
+### Markdown
 
-### markdown
-
-- vim-table-mode <https://github.com/dhruvasagar/vim-table-mode>
 - markdown-preview.nvim <https://github.com/iamcco/markdown-preview.nvim>
 
-### editor
+### Editor
 
-- auto-pairs <https://github.com/jiangmiao/auto-pairs>
+- nvim-autopairs <https://github.com/windwp/nvim-autopairs>
 - editorconfig-vim <https://github.com/editorconfig/editorconfig-vim>
 - nvim-treesitter <https://github.com/nvim-treesitter/nvim-treesitter>
 - smartim <https://github.com/ybian/smartim>
 
-### termial
+### Termial
 
 - neoterm <https://github.com/kassio/neoterm>
 
-### file-explorer
+### FileExplorer
 
 - defx-git <https://github.com/kristijanhusak/defx-git>
 - defx-icons <https://github.com/kristijanhusak/defx-icons>
 - defx.nvim <https://github.com/Shougo/defx.nvim>
 
-### search
+### Search
 
 - telescope.nvim <https://github.com/nvim-telescope/telescope.nvim>
 - plenary.nvim <https://github.com/nvim-lua/plenary.nvim>
 
-### lsp
-
+### Lsp Base
 - nvim-lspconfig <https://github.com/neovim/nvim-lspconfig>
-- cmp-nvim-lsp <https://github.com/hrsh7th/cmp-nvim-lsp>
+- lspkind-nvim <https://github.com/onsails/lspkind-nvim>
+
+### Lsp Cmp
+
 - nvim-cmp <https://github.com/hrsh7th/nvim-cmp>
+- cmp-nvim-lsp <https://github.com/hrsh7th/cmp-nvim-lsp>
 
-### luasnip
+### Luasnip
 
-- cmp_luasnip <https://github.com/saadparwaiz1/cmp_luasnip>
 - LuaSnip <https://github.com/L3MON4D3/LuaSnip>
 
-### colorscheme
+### Colorscheme
 
 - vim-code-dark <https://github.com/tomasiser/vim-code-dark>
+
