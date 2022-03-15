@@ -1,7 +1,10 @@
 local list = {}
 
 list['codedark'] = [[
-  colorscheme codedark
+  try
+      colorscheme codedark
+  catch
+  endtry
 ]]
 
 local themes = {}
