@@ -27,8 +27,9 @@ hash git >/dev/null && /usr/bin/env git clone git@github.com:zouzonghua/nvim.git
 # echo "link other config file to your home directory.."
 # ln -s $nvim_folder/NERDTreeBookmarks $nerd_tree_bookmarks
 
-# run PlugInstall to install all plugins
-nvim +'PackerSync --sync' +qa
+# run PackerSync to install all plugins
+nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
+nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
 
 echo ""
 echo "\033[0;34mNice! Seems everything is going well.\033[0m"
