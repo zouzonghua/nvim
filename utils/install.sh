@@ -28,9 +28,7 @@ hash git >/dev/null && /usr/bin/env git clone -b 'lua' git@github.com:zouzonghua
 # ln -s $nvim_folder/NERDTreeBookmarks $nerd_tree_bookmarks
 
 # run PackerSync to install all plugins
-nvim --headless  -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
-sleep 3
-nvim  -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
+nvim -c "autocmd User PackerComplete quitall" -c "PackerSync"
 
 echo ""
 echo "\033[0;34mNice! Seems everything is going well.\033[0m"
