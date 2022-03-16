@@ -60,6 +60,15 @@ return packer.startup(function(use)
         requires = 'kyazdani42/nvim-web-devicons',
     }
 
+    -- Git
+    use {
+        'lewis6991/gitsigns.nvim',
+        config = require('plugins.gitsigns').config and require('plugins.gitsigns').config(),
+        requires = {
+            'nvim-lua/plenary.nvim',
+        },
+    }
+
     -- Markdown
     use {
         'iamcco/markdown-preview.nvim',
