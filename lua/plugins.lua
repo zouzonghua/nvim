@@ -103,7 +103,7 @@ return packer.startup(function(use)
     use {
         'Shougo/defx.nvim',
         run = ':UpdateRemotePlugins',
-        -- config = require('plugins.defx').config and require('plugins.defx').config(),
+        config = require('plugins.defx').config and require('plugins.defx').config(),
         requires = {
             { 'kristijanhusak/defx-icons' },
             { 'kristijanhusak/defx-git' },
