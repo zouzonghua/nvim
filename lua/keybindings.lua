@@ -1,13 +1,13 @@
 local utils = require 'utils'
 
 -- telescope
-utils.map('n', '<leader>ff', ':lua require("telescope.builtin").find_files()<cr>', N)
-utils.map('n', '<leader>fg', ':lua require("telescope.builtin").live_grep()<cr>', N)
-utils.map('n', '<leader>fh', ':lua require("telescope.builtin").help_tags()<cr>', N)
+utils.map('n', '<leader>ff', ':lua require("telescope.builtin").find_files()<cr>')
+utils.map('n', '<leader>fg', ':lua require("telescope.builtin").live_grep()<cr>')
+utils.map('n', '<leader>fh', ':lua require("telescope.builtin").help_tags()<cr>')
 
 -- buffer
-utils.map('', '<Leader>ll', ':BufferLineCloseRight<CR>', N)
-utils.map('', '<Leader>hh', ':BufferLineCloseLeft<CR>', N)
+utils.map('', '<Leader>ll', ':BufferLineCloseRight<CR>')
+utils.map('', '<Leader>hh', ':BufferLineCloseLeft<CR>')
 
 -- command mode
 utils.map('c', '<C-a>', '<Home>')
@@ -28,3 +28,7 @@ utils.map('c', '<M-b>', '<S-Left>')
 utils.map('v', 'J', [[:m '>+1<CR>gv=gv]])
 
 utils.map('v', 'K', [[:m '<-2<CR>gv=gv]])
+
+-- search
+--  " cancel search highlight if hit enter key after searching
+utils.map('n', '<Enter>', ':nohlsearch<Enter><Enter>')

@@ -157,6 +157,12 @@ return packer.startup(function(use)
         'tomasiser/vim-code-dark',
     }
 
+    -- Ledger
+    use {
+        'ledger/vim-ledger',
+        ft = { 'ledger' },
+    }
+
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
     if PACKER_BOOTSTRAP then

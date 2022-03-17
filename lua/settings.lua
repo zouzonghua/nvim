@@ -3,6 +3,9 @@ vim.g.mapleader = ','
 --------------------------------------------------------------------------------
 -- Appearance
 --------------------------------------------------------------------------------
+vim.o.encoding = 'utf-8'
+vim.o.fileencoding = 'utf-8'
+
 vim.o.cc = '80' -- display line number
 vim.o.number = true -- display line number
 vim.o.cursorline = true -- Enable highlighting of the current line
@@ -21,12 +24,16 @@ vim.opt.fillchars = { -- hidden ~
 
 -- vim.o.showcmd = true -- display incomplete commands
 -- vim.o.backspace = '2' -- Backspace deletes like most programs in insert mode
--- vim.o.hlsearch = true -- highlight searches (:noh to turn off)
--- vim.o.ignorecase = true -- case insensitive searching
--- vim.o.smartcase = true -- overrides ignorecase when pattern contains caps
 -- vim.o.laststatus = 2 -- Always display the status line
 -- vim.o.ruler = true -- show the cursor position all the time
--- vim.o.incsearch = true -- do incremental searching
+
+--------------------------------------------------------------------------------
+-- Search
+--------------------------------------------------------------------------------
+vim.o.hlsearch = true -- highlight searches (:noh to turn off)
+vim.o.ignorecase = true -- case insensitive searching
+vim.o.incsearch = true -- do incremental searching
+vim.o.smartcase = true -- overrides ignorecase when pattern contains caps
 
 --------------------------------------------------------------------------------
 -- Tabs and spaces
@@ -59,7 +66,8 @@ vim.opt.listchars = 'tab:»■,trail:■' -- 多余的空格（包括 Tab 键）
 -- zc 关闭当前 zo 打开当前 zO 打开当前以及嵌套
 -- zM 关闭所有 zR 打开所有
 --------------------------------------------------------------------------------
-vim.wo.foldmethod = 'expr'
-vim.wo.foldexpr = 'nvim_treesitter#foldexpr()'
+vim.wo.foldmethod = 'marker'
+-- vim.wo.foldmethod = 'expr'
+-- vim.wo.foldexpr = 'nvim_treesitter#foldexpr()'
 vim.opt.foldlevel = 99 -- 折叠层级
 vim.foldlevelstart = 99
