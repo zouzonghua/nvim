@@ -3,6 +3,7 @@ vim.g.mapleader = ','
 --------------------------------------------------------------------------------
 -- Appearance
 --------------------------------------------------------------------------------
+vim.o.mouse = 'a' -- mouse support
 vim.o.cc = '80' -- display line number
 vim.o.number = true -- display line number
 vim.o.cursorline = true -- Enable highlighting of the current line
