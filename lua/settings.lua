@@ -3,9 +3,6 @@ vim.g.mapleader = ','
 --------------------------------------------------------------------------------
 -- Appearance
 --------------------------------------------------------------------------------
-vim.o.encoding = 'utf-8'
-vim.o.fileencoding = 'utf-8'
-
 vim.o.cc = '80' -- display line number
 vim.o.number = true -- display line number
 vim.o.cursorline = true -- Enable highlighting of the current line
@@ -26,6 +23,12 @@ vim.opt.fillchars = { -- hidden ~
 -- vim.o.backspace = '2' -- Backspace deletes like most programs in insert mode
 -- vim.o.laststatus = 2 -- Always display the status line
 -- vim.o.ruler = true -- show the cursor position all the time
+
+---------------------------------------------------------------------------------
+-- file encoding
+---------------------------------------------------------------------------------
+vim.o.encoding = 'utf-8'
+vim.o.fileencoding = 'utf-8'
 
 --------------------------------------------------------------------------------
 -- Search
