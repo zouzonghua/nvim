@@ -34,11 +34,9 @@ utils.map('v', 'K', [[:m '<-2<CR>gv=gv]])
 utils.map('n', '<Enter>', ':nohlsearch<Enter><Enter>')
 
 -- eslint_d
-vim.cmd(
-    [[
+vim.cmd [[
       autocmd Filetype typescriptreact nmap <leader>fe mF:%!eslint_d --stdin --fix-to-stdout --stdin-filename %<CR>`F
       autocmd Filetype javascriptreact nmap <leader>fe mF:%!eslint_d --stdin --fix-to-stdout --stdin-filename %<CR>`F
       autocmd Filetype typescript nmap <leader>fe mF:%!eslint_d --stdin --fix-to-stdout --stdin-filename %<CR>`F
       autocmd Filetype javascript nmap <leader>fe mF:%!eslint_d --stdin --fix-to-stdout --stdin-filename %<CR>`F
     ]]
-)

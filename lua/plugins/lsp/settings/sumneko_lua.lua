@@ -2,8 +2,8 @@ return {
     settings = {
 
         Lua = {
-           autoFixOnSave = true,
-           autoFixOnFormat = true,
+            autoFixOnSave = true,
+            autoFixOnFormat = true,
             diagnostics = {
                 globals = { 'vim' },
             },

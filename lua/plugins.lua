@@ -130,9 +130,10 @@ return packer.startup(function(use)
     -- LSP
     use {
         'neovim/nvim-lspconfig',
-         config = require('plugins.lsp'),
+        config = require 'plugins.lsp',
     } -- enable LSP
     use 'williamboman/nvim-lsp-installer' -- simple to use language server installer
+    use 'jose-elias-alvarez/null-ls.nvim' -- for formatters and linters
 
     -- Cmp plugins
     use {
@@ -159,5 +160,4 @@ return packer.startup(function(use)
         'ledger/vim-ledger',
         ft = { 'ledger' },
     }
-
 end)
