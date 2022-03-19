@@ -3,7 +3,8 @@
 local present, packer = pcall(require, 'packer')
 
 if not present then
-    local packer_path = vim.fn.stdpath 'data' .. '/site/pack/packer/opt/packer.nvim'
+    local packer_path = vim.fn.stdpath 'data'
+        .. '/site/pack/packer/opt/packer.nvim'
 
     -- print 'Cloning packer..'
     -- remove the dir before cloning
@@ -23,7 +24,12 @@ if not present then
     if present then
         print 'Packer cloned successfully.'
     else
-        error('Couldn\'t clone packer !\nPacker path: ' .. packer_path .. '\n' .. packer)
+        error(
+            'Couldn\'t clone packer !\nPacker path: '
+                .. packer_path
+                .. '\n'
+                .. packer
+        )
     end
 end
 
@@ -51,19 +57,25 @@ return packer.startup(function(use)
     -- Appearance
     use {
         'nvim-lualine/lualine.nvim',
-        config = require('plugins.lualine').config and require('plugins.lualine').config(),
+        config = require('plugins.lualine').config and require(
+            'plugins.lualine'
+        ).config(),
         requires = { 'kyazdani42/nvim-web-devicons' },
     }
     use {
         'akinsho/bufferline.nvim',
-        config = require('plugins.bufferline').config and require('plugins.bufferline').config(),
+        config = require('plugins.bufferline').config and require(
+            'plugins.bufferline'
+        ).config(),
         requires = 'kyazdani42/nvim-web-devicons',
     }
 
     -- Git
     use {
         'lewis6991/gitsigns.nvim',
-        config = require('plugins.gitsigns').config and require('plugins.gitsigns').config(),
+        config = require('plugins.gitsigns').config and require(
+            'plugins.gitsigns'
+        ).config(),
         requires = {
             'nvim-lua/plenary.nvim',
         },
@@ -73,8 +85,9 @@ return packer.startup(function(use)
     use {
         'iamcco/markdown-preview.nvim',
         run = 'cd app && npm install',
-        config = require('plugins.markdown-preview').config
-            and require('plugins.markdown-preview').config(),
+        config = require('plugins.markdown-preview').config and require(
+            'plugins.markdown-preview'
+        ).config(),
         setup = function()
             vim.g.mkdp_filetypes = { 'markdown' }
         end,
@@ -84,12 +97,15 @@ return packer.startup(function(use)
     -- Editor
     use {
         'windwp/nvim-autopairs',
-        config = require('plugins.nvim-autopairs').config
-            and require('plugins.nvim-autopairs').config(),
+        config = require('plugins.nvim-autopairs').config and require(
+            'plugins.nvim-autopairs'
+        ).config(),
     }
     use {
         'nvim-treesitter/nvim-treesitter',
-        config = require('plugins.treesitter').config and require('plugins.treesitter').config(),
+        config = require('plugins.treesitter').config and require(
+            'plugins.treesitter'
+        ).config(),
         run = ':TSUpdate',
     }
     use {
@@ -98,20 +114,25 @@ return packer.startup(function(use)
     }
     use {
         'ybian/smartim',
-        config = require('plugins.smartim').config and require('plugins.smartim').config(),
+        config = require('plugins.smartim').config and require(
+            'plugins.smartim'
+        ).config(),
     }
 
     -- Termial
     use {
         'kassio/neoterm',
-        config = require('plugins.neoterm').config and require('plugins.neoterm').config(),
+        config = require('plugins.neoterm').config and require(
+            'plugins.neoterm'
+        ).config(),
     }
 
     -- FileExplorer
     use {
         'Shougo/defx.nvim',
         run = ':UpdateRemotePlugins',
-        config = require('plugins.defx').config and require('plugins.defx').config(),
+        config = require('plugins.defx').config
+            and require('plugins.defx').config(),
         requires = {
             { 'kristijanhusak/defx-icons' },
             { 'kristijanhusak/defx-git' },
@@ -121,7 +142,9 @@ return packer.startup(function(use)
     -- Search
     use {
         'nvim-telescope/telescope.nvim',
-        config = require('plugins.telescope').config and require('plugins.telescope').config(),
+        config = require('plugins.telescope').config and require(
+            'plugins.telescope'
+        ).config(),
         requires = {
             { 'nvim-lua/plenary.nvim' },
         },
@@ -130,7 +153,8 @@ return packer.startup(function(use)
     -- LSP
     use {
         'neovim/nvim-lspconfig',
-        config = require 'plugins.lsp',
+        config = require('plugins.lsp').config
+            and require('plugins.lsp').config(),
     } -- enable LSP
     use 'williamboman/nvim-lsp-installer' -- simple to use language server installer
     use 'jose-elias-alvarez/null-ls.nvim' -- for formatters and linters
@@ -138,7 +162,8 @@ return packer.startup(function(use)
     -- Cmp plugins
     use {
         'hrsh7th/nvim-cmp',
-        config = require('plugins.cmp').config and require('plugins.cmp').config(),
+        config = require('plugins.cmp').config
+            and require('plugins.cmp').config(),
     } -- The completion plugin
     use 'hrsh7th/cmp-nvim-lsp' -- lsp completion
     use 'hrsh7th/cmp-buffer' -- buffer completions
