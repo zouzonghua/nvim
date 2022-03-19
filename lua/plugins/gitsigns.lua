@@ -5,19 +5,21 @@ end
 
 local M = {}
 
+
 function M.config()
+
     gitsigns.setup {
         signs = {
-            add = { hl = false, text = '+', numhl = false, linehl = false },
-            change = { hl = false, text = '~', numhl = false, linehl = false },
-            delete = { hl = false, text = '-', numhl = false, linehl = false },
-            topdelete = { hl = false, text = '‾', numhl = false, linehl = false },
-            changedelete = { hl = false, text = '~', numhl = false, linehl = false },
+          add = { hl = "GitSignsAdd", text = "▎", numhl = "GitSignsAddNr", linehl = "GitSignsAddLn" },
+          change = { hl = "GitSignsChange", text = "▎", numhl = "GitSignsChangeNr", linehl = "GitSignsChangeLn" },
+          delete = { hl = "GitSignsDelete", text = "契", numhl = "GitSignsDeleteNr", linehl = "GitSignsDeleteLn" },
+          topdelete = { hl = "GitSignsDelete", text = "契", numhl = "GitSignsDeleteNr", linehl = "GitSignsDeleteLn" },
+          changedelete = { hl = "GitSignsChange", text = "▎", numhl = "GitSignsChangeNr", linehl = "GitSignsChangeLn" },
         },
         signcolumn = true, -- Toggle with `:Gitsigns toggle_signs`
         numhl = false, -- Toggle with `:Gitsigns toggle_numhl`
-        -- linehl = true, -- Toggle with `:Gitsigns toggle_linehl`
-        word_diff = true, -- Toggle with `:Gitsigns toggle_word_diff`
+        linehl = false, -- Toggle with `:Gitsigns toggle_linehl`
+        word_diff = false, -- Toggle with `:Gitsigns toggle_word_diff`
         watch_gitdir = {
             interval = 1000,
             follow_files = true,
@@ -77,8 +79,15 @@ function M.config()
             -- Text object
             map('o', 'ih', ':<C-U>Gitsigns select_hunk<CR>')
             map('x', 'ih', ':<C-U>Gitsigns select_hunk<CR>')
+
+            -- Color style
+            vim.cmd('highlight GitSignsAdd guifg=#4d7e00 guibg=#1E1E1E')
+            vim.cmd('highlight GitSignsChange guifg=#007ea0 guibg=#1E1E1E')
+            vim.cmd('highlight GitSignsDelete guifg=#a10011 guibg=#1E1E1E')
+
         end,
     }
+
 end
 
 return M

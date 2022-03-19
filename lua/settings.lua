@@ -5,6 +5,7 @@ vim.g.mapleader = ','
 --------------------------------------------------------------------------------
 vim.o.mouse = 'a' -- mouse support
 vim.o.cc = '80' -- display line number
+vim.wo.wrap = false -- nowrap
 vim.o.number = true -- display line number
 vim.o.cursorline = true -- Enable highlighting of the current line
 vim.o.termguicolors = true -- true color
