@@ -127,30 +127,27 @@ return packer.startup(function(use)
         },
     }
 
-    -- LSP Base
+    -- LSP
     use {
         'neovim/nvim-lspconfig',
-        config = require('plugins.lspconfig').config and require('plugins.lspconfig').config(),
-    }
-    use {
-        'onsails/lspkind-nvim',
-        config = require('plugins.lspkind').config and require('plugins.lspkind').config(),
-    }
+         config = require('plugins.lsp'),
+    } -- enable LSP
+    use 'williamboman/nvim-lsp-installer' -- simple to use language server installer
 
-    -- LSP Cmp
+    -- Cmp plugins
     use {
         'hrsh7th/nvim-cmp',
-        config = require('plugins.nvim-cmp').config and require('plugins.nvim-cmp').config(),
-    }
-    use {
-        'hrsh7th/cmp-nvim-lsp',
-        requires = 'hrsh7th/nvim-cmp',
-    }
+        config = require('plugins.cmp').config and require('plugins.cmp').config(),
+    } -- The completion plugin
+    use 'hrsh7th/cmp-nvim-lsp' -- lsp completion
+    use 'hrsh7th/cmp-buffer' -- buffer completions
+    use 'hrsh7th/cmp-path' -- path completions
+    use 'hrsh7th/cmp-cmdline' -- cmdline completions
+    use 'saadparwaiz1/cmp_luasnip' -- snippet completions
 
-    -- Luasnip
-    use {
-        'L3MON4D3/LuaSnip',
-    }
+    -- Snippets
+    use 'L3MON4D3/LuaSnip' --snippet engine
+    use 'rafamadriz/friendly-snippets' -- a bunch of snippets to use
 
     -- Colorscheme
     use {
@@ -163,9 +160,4 @@ return packer.startup(function(use)
         ft = { 'ledger' },
     }
 
-    -- Automatically set up your configuration after cloning packer.nvim
-    -- Put this at the end after all plugins
-    if PACKER_BOOTSTRAP then
-        require('packer').sync()
-    end
 end)

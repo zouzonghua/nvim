@@ -32,3 +32,13 @@ utils.map('v', 'K', [[:m '<-2<CR>gv=gv]])
 -- search
 --  " cancel search highlight if hit enter key after searching
 utils.map('n', '<Enter>', ':nohlsearch<Enter><Enter>')
+
+-- eslint_d
+vim.cmd(
+    [[
+      autocmd Filetype typescriptreact nmap <leader>fe mF:%!eslint_d --stdin --fix-to-stdout --stdin-filename %<CR>`F
+      autocmd Filetype javascriptreact nmap <leader>fe mF:%!eslint_d --stdin --fix-to-stdout --stdin-filename %<CR>`F
+      autocmd Filetype typescript nmap <leader>fe mF:%!eslint_d --stdin --fix-to-stdout --stdin-filename %<CR>`F
+      autocmd Filetype javascript nmap <leader>fe mF:%!eslint_d --stdin --fix-to-stdout --stdin-filename %<CR>`F
+    ]]
+)
