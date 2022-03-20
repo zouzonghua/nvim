@@ -1,6 +1,7 @@
+local utils = require 'utils'
 local status, lualine = pcall(require, 'lualine')
 if not status then
-    return { config = nil }
+    return utils.emptyConfig()
 end
 
 local M = {}

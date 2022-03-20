@@ -1,6 +1,7 @@
+local utils = require 'utils'
 local status, autopairs = pcall(require, 'nvim-autopairs')
 if not status then
-    return { config = nil }
+    return utils.emptyConfig()
 end
 
 local M = {}

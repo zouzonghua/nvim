@@ -1,6 +1,8 @@
+local utils = require 'utils'
+
 local status, telescope = pcall(require, 'telescope')
 if not status then
-    return { config = nil }
+    return utils.emptyConfig()
 end
 
 local M = {}

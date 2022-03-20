@@ -23,7 +23,6 @@ function M.load(plugin, ...)
     end
 end
 
-
 function M.try(block)
     local main = block.main
     local catch = block.catch
@@ -49,6 +48,14 @@ function M.try(block)
     if ok then
         return errors
     end
+end
+
+function M.emptyConfig()
+    local _M = {}
+    function _M.config()
+    end
+
+    return _M
 end
 
 return M

@@ -1,11 +1,13 @@
+local utils = require 'utils'
+
 local lspconfig_status_ok, _ = pcall(require, 'lspconfig')
 if not lspconfig_status_ok then
-    return { config = nil}
+    return utils.emptyConfig()
 end
 
 local nvim_lsp_installer_status_ok, _ = pcall(require, 'nvim-lsp-installer')
 if not nvim_lsp_installer_status_ok then
-    return { config = nil}
+    return utils.emptyConfig()
 end
 
 local M = {}

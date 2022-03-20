@@ -47,7 +47,13 @@ function M.config()
                 vim.cmd 'setl nonumber'
                 buf_map(0, 'n', 'A', [[defx#do_action('toggle_select_all')]], N)
                 buf_map(0, 'n', 'a', [[defx#do_action('toggle_select_all')]], N)
-                buf_map(0, 'n', '<Space>', [[defx#do_action('toggle_select') . 'j']], N)
+                buf_map(
+                    0,
+                    'n',
+                    '<Space>',
+                    [[defx#do_action('toggle_select') . 'j']],
+                    N
+                )
                 buf_map(0, 'n', 'c', [[defx#do_action('copy')]], N)
                 buf_map(0, 'n', 'm', [[defx#do_action('move')]], N)
                 buf_map(0, 'n', 'p', [[defx#do_action('paste')]], N)
@@ -56,7 +62,13 @@ function M.config()
                 buf_map(0, 'n', 'R', [[defx#do_action('rename')]], N)
                 buf_map(0, 'n', 'O', [[defx#do_action('execute_system')]], N)
                 buf_map(0, 'n', 'q', [[defx#do_action('quit')]], N)
-                buf_map(0, 'n', '.', [[defx#do_action('toggle_ignored_files')]], N)
+                buf_map(
+                    0,
+                    'n',
+                    '.',
+                    [[defx#do_action('toggle_ignored_files')]],
+                    N
+                )
                 buf_map(0, 'n', 'h', [[defx#do_action('cd', ['..'])]], N)
                 buf_map(0, 'n', 'l', [[defx#do_action('drop')]], N)
                 buf_map(
@@ -95,10 +107,9 @@ function M.config()
         finally = function(ok, errors)
             -- print('finally : ' .. tostring(ok))
             if not ok then
-              return { config = nil}
+                return utils.emptyConfig()
             end
         end,
-
     }
 end
 
