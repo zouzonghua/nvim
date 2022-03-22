@@ -164,4 +164,10 @@ return packer.startup(function(use)
         'ledger/vim-ledger',
         ft = { 'ledger' },
     }
+
+    -- Beancount
+    use {
+        'nathangrigg/vim-beancount',
+        ft = { 'beancount' },
+    }
 end)
