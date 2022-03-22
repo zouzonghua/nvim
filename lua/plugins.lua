@@ -105,7 +105,7 @@ return packer.startup(function(use)
         config = require('plugins.smartim').config(),
     }
 
-    -- Termial
+    -- Terminal
     use {
         'kassio/neoterm',
         config = require('plugins.neoterm').config(),
@@ -139,7 +139,7 @@ return packer.startup(function(use)
     use 'williamboman/nvim-lsp-installer' -- simple to use language server installer
     use 'jose-elias-alvarez/null-ls.nvim' -- for formatters and linters
 
-    -- Cmp plugins
+    -- Cmp
     use {
         'hrsh7th/nvim-cmp',
         config = require('plugins.nvim-cmp').config(),

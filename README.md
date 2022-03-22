@@ -3,7 +3,7 @@
 
 my neovim setttings
 
-![shreenshot](./screenshot/202203152200.png)
+![shreenshot](./screenshot/202203221033.png)
 
 ## installation
 
@@ -23,6 +23,10 @@ sh <(curl -L https://github.com/zouzonghua/nvim/raw/lua/utils/install.sh)
 - bufferline.nvim <https://github.com/akinsho/bufferline.nvim>
 - nvim-web-devicons <https://github.com/kyazdani42/nvim-web-devicons>
 
+### Git
+
+- gitsigns.nvim <https://github.com/lewis6991/gitsigns.nvim>
+
 ### Markdown
 
 - markdown-preview.nvim <https://github.com/iamcco/markdown-preview.nvim>
@@ -38,7 +42,7 @@ sh <(curl -L https://github.com/zouzonghua/nvim/raw/lua/utils/install.sh)
 - nvim-treesitter <https://github.com/nvim-treesitter/nvim-treesitter>
 - smartim <https://github.com/ybian/smartim>
 
-### Termial
+### Terminal
 
 - neoterm <https://github.com/kassio/neoterm>
 
@@ -53,20 +57,31 @@ sh <(curl -L https://github.com/zouzonghua/nvim/raw/lua/utils/install.sh)
 - telescope.nvim <https://github.com/nvim-telescope/telescope.nvim>
 - plenary.nvim <https://github.com/nvim-lua/plenary.nvim>
 
-### Lsp Base
-- nvim-lspconfig <https://github.com/neovim/nvim-lspconfig>
-- lspkind-nvim <https://github.com/onsails/lspkind-nvim>
+### Lsp
 
-### Lsp Cmp
+- nvim-lspconfig <https://github.com/neovim/nvim-lspconfig>
+- nvim-lsp-installer <https://github.com/williamboman/nvim-lsp-installer>
+- null-ls.nvim <https://github.com/jose-elias-alvarez/null-ls.nvim>
+
+### Cmp
 
 - nvim-cmp <https://github.com/hrsh7th/nvim-cmp>
 - cmp-nvim-lsp <https://github.com/hrsh7th/cmp-nvim-lsp>
+- cmp-buffer <https://github.com/hrsh7th/cmp-buffer>
+- cmp-path <https://github.com/hrsh7th/cmp-path>
+- cmp-cmdline <https://github.com/hrsh7th/cmp-cmdline>
+- cmp_luasnip <https://github.com/saadparwaiz1/cmp_luasnip>
 
-### Luasnip
+### Snippets
 
 - LuaSnip <https://github.com/L3MON4D3/LuaSnip>
+- friendly-snippets <https://github.com/rafamadriz/friendly-snippets>
 
 ### Colorscheme
 
 - vim-code-dark <https://github.com/tomasiser/vim-code-dark>
+
+### Beancount
+
+- vim-beancount <https://github.com/nathangrigg/vim-beancount>
 
