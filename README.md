@@ -19,7 +19,7 @@ open nvim, run `:PlugInstall` install plugin
 ### shell
 
 ```
-sh <(curl -L https://github.com/zouzonghua/nvim/raw/main/utils/install.sh)
+sh <(curl -L https://github.com/zouzonghua/nvim/raw/vim/utils/install.sh)
 ```
 
 ## plugin
