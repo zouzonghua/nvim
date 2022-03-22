@@ -31,10 +31,6 @@ sh <(curl -L https://github.com/zouzonghua/nvim/raw/lua/utils/install.sh)
 
 - markdown-preview.nvim <https://github.com/iamcco/markdown-preview.nvim>
 
-### Git
-
-- gitsigns.nvim <https://github.com/lewis6991/gitsigns.nvim>
-
 ### Editor
 
 - nvim-autopairs <https://github.com/windwp/nvim-autopairs>
