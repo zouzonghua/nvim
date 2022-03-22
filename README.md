@@ -3,11 +3,7 @@
 
 my neovim setttings
 
-<<<<<<< HEAD
-![screenshot](./screenshot/202110051235.png)
-=======
 ![screenshot](./screenshot/202203221033.png)
->>>>>>> lua
 
 ## installation
 
