@@ -3,7 +3,7 @@
 
 my neovim setttings
 
-![shreenshot](./screenshot/202203221033.png)
+![screenshot](./screenshot/202203221033.png)
 
 ## installation
 
