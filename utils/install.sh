@@ -18,7 +18,7 @@ then
 fi
 
 # check if Git is installed
-hash git >/dev/null && /usr/bin/env git clone git@github.com:zouzonghua/nvim.git ~/.config/nvim || {
+hash git >/dev/null && /usr/bin/env git clone -b 'lua' git@github.com:zouzonghua/nvim.git ~/.config/nvim || {
     echo "Sorry, Git is not installed yet!"
   exit
 }
@@ -27,8 +27,8 @@ hash git >/dev/null && /usr/bin/env git clone git@github.com:zouzonghua/nvim.git
 # echo "link other config file to your home directory.."
 # ln -s $nvim_folder/NERDTreeBookmarks $nerd_tree_bookmarks
 
-# run PlugInstall to install all plugins
-nvim +'PlugInstall --sync' +qa
+# run PackerSync to install all plugins
+nvim -c "autocmd User PackerComplete quitall" -c "PackerSync"
 
 echo ""
 echo "\033[0;34mNice! Seems everything is going well.\033[0m"
