@@ -19,7 +19,13 @@ function M.config()
                 return '(' .. count .. ')'
             end,
             show_close_icon = false,
-            offsets = { { filetype = 'NvimTree', text = 'File Explorer', text_align = 'center' } },
+            offsets = {
+                {
+                    filetype = 'NvimTree',
+                    text = 'File Explorer',
+                    text_align = 'center',
+                },
+            },
             sort_by = function(buffer_a, buffer_b)
                 -- add custom logic
                 return buffer_a.ordinal < buffer_b.ordinal
@@ -28,7 +34,10 @@ function M.config()
     }
 
     local function close_buffer()
-        if vim.fn.winnr() == vim.fn.winnr '$' then
+        if
+            vim.fn.winnr() == vim.fn.winnr '$'
+            and vim.api.nvim_win_get_number(0) > 1
+        then
             vim.cmd 'Defx -buffer-name=tab`tabpagenr()`'
             vim.cmd 'bd'
             vim.cmd 'Defx -buffer-name=tab`tabpagenr()`'
@@ -47,8 +56,15 @@ function M.config()
     map('n', '<C-h>', ':BufferLineCyclePrev<CR>', N)
 end
 
+print()
 return M
 
+-- debugger code
+-- print(vim.nvim_win_get_number(vim.nvim_tabpage_get_win(vim.api.nvim_get_current_tabpage())))
+-- print(vim.nvim_tabpage_get_win(vim.api.nvim_get_current_tabpage()))
+-- print(vim.api.nvim_get_current_tabpage())
+-- nvim_get_current_win()
+-- vim.api.nvim_win_get_number(vim.api.nvim_get_current_win())
 --  vim.api.nvim_get_current_buf()
 --   function! s:close_buffer()
 --     let window_counter = 0
