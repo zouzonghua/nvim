@@ -46,7 +46,7 @@ function M.config()
             function defx_my_settings()
                 vim.cmd 'setl nonumber'
                 buf_map(0, 'n', 'A', [[defx#do_action('toggle_select_all')]], N)
-                buf_map(0, 'n', 'a', [[defx#do_action('toggle_select_all')]], N)
+                -- buf_map(0, 'n', 'a', [[defx#do_action('toggle_select_all')]], N)
                 buf_map(
                     0,
                     'n',
@@ -57,11 +57,13 @@ function M.config()
                 buf_map(0, 'n', 'c', [[defx#do_action('copy')]], N)
                 buf_map(0, 'n', 'm', [[defx#do_action('move')]], N)
                 buf_map(0, 'n', 'p', [[defx#do_action('paste')]], N)
-                buf_map(0, 'n', 'n', [[defx#do_action('new_file')]], N)
+                buf_map(0, 'n', 'N', [[defx#do_action('new_file')]], N)
                 buf_map(0, 'n', 'x', [[defx#do_action('remove')]], N)
                 buf_map(0, 'n', 'R', [[defx#do_action('rename')]], N)
+                buf_map(0, 'n', 'r', [[defx#do_action('clear_clipboard') . defx#do_action('redraw')]], N)
                 buf_map(0, 'n', 'O', [[defx#do_action('execute_system')]], N)
                 buf_map(0, 'n', 'q', [[defx#do_action('quit')]], N)
+                buf_map(0, 'n', '<C-e>', [[defx#do_action('quit')]], N)
                 buf_map(
                     0,
                     'n',

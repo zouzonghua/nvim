@@ -10,27 +10,22 @@ local formatting = null_ls.builtins.formatting
 -- https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main/lua/null-ls/builtins/diagnostics
 local diagnostics = null_ls.builtins.diagnostics
 
-local no_really = {
-    filetypes = {
-        'lua',
-        'javascript',
-        'javascriptreact',
-        'typescript',
-        'typescriptreact',
-        'css',
-        'less',
-        'scss',
-        'markdown',
-        'html',
-    },
-}
-
-null_ls.register(no_really)
-
 null_ls.setup {
     debug = false,
     sources = {
-        formatting.prettier,
+        formatting.prettier.with({
+          filetypes = {
+           'javascript',
+           'javascriptreact',
+           'typescript',
+           'typescriptreact',
+           'css',
+           'less',
+           'scss',
+           'markdown',
+           'html',
+          },
+        }),
         formatting.stylua,
         diagnostics.eslint_d,
     },

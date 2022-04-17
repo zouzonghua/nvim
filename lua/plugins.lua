@@ -159,15 +159,10 @@ return packer.startup(function(use)
         'tomasiser/vim-code-dark',
     }
 
-    -- Ledger
-    use {
-        'ledger/vim-ledger',
-        ft = { 'ledger' },
-    }
-
     -- Beancount
     use {
         'nathangrigg/vim-beancount',
+        config = require('plugins.beancount').config(),
         ft = { 'beancount' },
     }
 end)

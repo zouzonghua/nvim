@@ -24,6 +24,7 @@ function M.config()
             'javascript',
             'html',
             'scss',
+            'vue',
             'lua',
         },
     }
