@@ -124,12 +124,14 @@ function M.config()
             behavior = cmp.ConfirmBehavior.Replace,
             select = false,
         },
-        documentation = {
-            border = { '╭', '─', '╮', '│', '╯', '─', '╰', '│' },
-        },
         experimental = {
             ghost_text = false,
             native_menu = false,
+        },
+        window = {
+          documentation = {
+              border = { '╭', '─', '╮', '│', '╯', '─', '╰', '│' },
+          },
         },
     }
 
