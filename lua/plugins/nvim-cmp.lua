@@ -109,7 +109,6 @@ function M.config()
                     nvim_lsp = '[LSP]',
                     luasnip = '[Snippet]',
                     buffer = '[Buffer]',
-                    path = '[Path]',
                 })[entry.source.name]
                 return vim_item
             end,
@@ -118,7 +117,6 @@ function M.config()
             { name = 'nvim_lsp' },
             { name = 'luasnip' },
             { name = 'buffer' },
-            { name = 'path' },
         },
         confirm_opts = {
             behavior = cmp.ConfirmBehavior.Replace,
@@ -135,14 +133,6 @@ function M.config()
         },
     }
 
-    -- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
-    cmp.setup.cmdline(':', {
-        sources = cmp.config.sources({
-            { name = 'path' },
-        }, {
-            { name = 'cmdline' },
-        }),
-    })
 end
 
 return M

@@ -37,6 +37,7 @@ sh <(curl -L https://github.com/zouzonghua/nvim/raw/lua/utils/install.sh)
 - editorconfig-vim <https://github.com/editorconfig/editorconfig-vim>
 - nvim-treesitter <https://github.com/nvim-treesitter/nvim-treesitter>
 - smartim <https://github.com/ybian/smartim>
+- vim-beancount <https://github.com/nathangrigg/vim-beancount>
 
 ### Terminal
 
@@ -64,8 +65,6 @@ sh <(curl -L https://github.com/zouzonghua/nvim/raw/lua/utils/install.sh)
 - nvim-cmp <https://github.com/hrsh7th/nvim-cmp>
 - cmp-nvim-lsp <https://github.com/hrsh7th/cmp-nvim-lsp>
 - cmp-buffer <https://github.com/hrsh7th/cmp-buffer>
-- cmp-path <https://github.com/hrsh7th/cmp-path>
-- cmp-cmdline <https://github.com/hrsh7th/cmp-cmdline>
 - cmp_luasnip <https://github.com/saadparwaiz1/cmp_luasnip>
 
 ### Snippets
@@ -76,8 +75,4 @@ sh <(curl -L https://github.com/zouzonghua/nvim/raw/lua/utils/install.sh)
 ### Colorscheme
 
 - vim-code-dark <https://github.com/tomasiser/vim-code-dark>
-
-### Beancount
-
-- vim-beancount <https://github.com/nathangrigg/vim-beancount>
 

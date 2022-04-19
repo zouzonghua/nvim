@@ -104,6 +104,11 @@ return packer.startup(function(use)
         'ybian/smartim',
         config = require('plugins.smartim').config(),
     }
+    use {
+        'nathangrigg/vim-beancount',
+        config = require('plugins.beancount').config(),
+        ft = { 'beancount' },
+    }
 
     -- Terminal
     use {
@@ -146,8 +151,6 @@ return packer.startup(function(use)
     } -- The completion plugin
     use 'hrsh7th/cmp-nvim-lsp' -- lsp completion
     use 'hrsh7th/cmp-buffer' -- buffer completions
-    use 'hrsh7th/cmp-path' -- path completions
-    use 'hrsh7th/cmp-cmdline' -- cmdline completions
     use 'saadparwaiz1/cmp_luasnip' -- snippet completions
 
     -- Snippets
@@ -157,12 +160,5 @@ return packer.startup(function(use)
     -- Colorscheme
     use {
         'tomasiser/vim-code-dark',
-    }
-
-    -- Beancount
-    use {
-        'nathangrigg/vim-beancount',
-        config = require('plugins.beancount').config(),
-        ft = { 'beancount' },
     }
 end)
