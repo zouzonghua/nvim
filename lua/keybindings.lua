@@ -20,6 +20,10 @@ utils.map(
 -- buffer
 utils.map('', '<Leader>ll', ':BufferLineCloseRight<CR>')
 utils.map('', '<Leader>hh', ':BufferLineCloseLeft<CR>')
+utils.map('', '<Leader>1', ':BufferLineGoToBuffer 1<CR>')
+utils.map('', '<Leader>2', ':BufferLineGoToBuffer 2<CR>')
+utils.map('', '<Leader>3', ':BufferLineGoToBuffer 3<CR>')
+utils.map('', '<Leader>4', ':BufferLineGoToBuffer 4<CR>')
 
 -- command mode
 utils.map('c', '<C-a>', '<Home>')
