@@ -1,15 +1,20 @@
 vim.g.mapleader = ','
 
 --------------------------------------------------------------------------------
--- Appearance
+-- General
 --------------------------------------------------------------------------------
 vim.o.mouse = 'a' -- mouse support
+vim.opt.clipboard = { 'unnamedplus' } -- system clipboard
+vim.opt.swapfile = false -- no swap file or vim.cmd('set noswapfile')
+
+--------------------------------------------------------------------------------
+-- Appearance
+--------------------------------------------------------------------------------
 vim.o.cc = '80' -- display line number
 vim.wo.wrap = false -- nowrap
 vim.o.number = true -- display line number
 vim.o.cursorline = true -- Enable highlighting of the current line
 vim.o.termguicolors = true -- true color
-vim.opt.clipboard = { 'unnamedplus' } -- system clipboard
 vim.opt.fillchars = { -- hidden ~
     vert = '▕', -- alternatives │
     fold = ' ',
@@ -26,9 +31,9 @@ vim.opt.fillchars = { -- hidden ~
 -- vim.o.laststatus = 2 -- Always display the status line
 -- vim.o.ruler = true -- show the cursor position all the time
 
----------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 -- file encoding
----------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 vim.o.encoding = 'utf-8'
 vim.o.fileencoding = 'utf-8'
 
