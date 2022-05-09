@@ -5,6 +5,6 @@ require 'settings'
 
 require 'keybindings'
 
-require 'disable-builtins'
+require 'disable_builtins'
 
 require 'colorscheme'
