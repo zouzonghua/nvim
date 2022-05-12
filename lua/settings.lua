@@ -51,15 +51,9 @@ vim.o.smartcase = true -- overrides ignorecase when pattern contains caps
 vim.o.tabstop = 2 -- 按下 Tab 键时，Vim 显示的空格数
 vim.o.shiftwidth = 2 -- 表示每一级缩进的长度
 vim.o.softtabstop = 2 -- 退格键退回缩进空格的长度
-vim.o.backspace = 'indent,eol,start' -- 退格键插入模式删除
 vim.o.expandtab = true -- 设置缩进用空格来表示
 vim.opt.list = true -- 显示非可见字符
 vim.opt.listchars = 'tab:»■,trail:■' -- 多余的空格（包括 Tab 键）显示小方块
-
--- vim.o.autoindent = true
--- vim.o.smartindent = true
--- vim.o.smarttab = true
--- vim.o.joinspaces = false
 
 --------------------------------------------------------------------------------
 -- Folding

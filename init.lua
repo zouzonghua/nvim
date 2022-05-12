@@ -7,4 +7,4 @@ require 'keybindings'
 
 require 'disable_builtins'
 
-require 'colorscheme'
+require 'themes'

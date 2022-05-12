@@ -13,4 +13,6 @@ function themes.switchColorScheme(name)
     vim.cmd(list[name])
 end
 
+themes.switchColorScheme 'codedark'
+
 return themes
