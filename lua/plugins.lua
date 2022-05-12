@@ -138,10 +138,22 @@ return packer.startup(function(use)
 
     -- LSP
     use {
-        'neovim/nvim-lspconfig',
-        config = require('plugins.lsp').config(),
-    } -- enable LSP
-    use 'williamboman/nvim-lsp-installer' -- simple to use language server installer
+      "williamboman/nvim-lsp-installer",
+      {
+          "neovim/nvim-lspconfig",
+          config = require('plugins.lsp').config(),
+         --  config = function()
+         --      require("nvim-lsp-installer").setup {}
+         --      local lspconfig = require("lspconfig")
+         --      lspconfig.sumneko_lua.setup {}
+         --  end
+      }
+    }
+   --  use {
+   --      'neovim/nvim-lspconfig',
+   --      config = require('plugins.lsp').config(),
+   --  } -- enable LSP
+    -- use 'williamboman/nvim-lsp-installer' -- simple to use language server installer
     use 'jose-elias-alvarez/null-ls.nvim' -- for formatters and linters
 
     -- Cmp

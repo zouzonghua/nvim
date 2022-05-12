@@ -1,13 +1,12 @@
 # nvim
+
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/zouzonghua/nvim/blob/main/LICENSE)
-
-my neovim setttings
-
+my neovim settings
 ![screenshot](./screenshot/202203221033.png)
 
 ## installation
 
-```
+```sh
 sh <(curl -L https://github.com/zouzonghua/nvim/raw/lua/utils/install.sh)
 ```
 
@@ -72,7 +71,6 @@ sh <(curl -L https://github.com/zouzonghua/nvim/raw/lua/utils/install.sh)
 - LuaSnip <https://github.com/L3MON4D3/LuaSnip>
 - friendly-snippets <https://github.com/rafamadriz/friendly-snippets>
 
-### Colorscheme
+## # Colorscheme
 
 - vim-code-dark <https://github.com/tomasiser/vim-code-dark>
-
