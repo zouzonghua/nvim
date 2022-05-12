@@ -51,12 +51,9 @@ function M.config()
 
     local map = vim.api.nvim_set_keymap
     local N = { noremap = true, silent = true }
-    map('n', '<C-x>', ':lua zzh.close_buffer()<CR>', N)
-    map('n', '<C-l>', ':BufferLineCycleNext<CR>', N)
-    map('n', '<C-h>', ':BufferLineCyclePrev<CR>', N)
+    map('n', '<C-c>', ':lua zzh.close_buffer()<CR>', N)
 end
 
-print()
 return M
 
 -- debugger code

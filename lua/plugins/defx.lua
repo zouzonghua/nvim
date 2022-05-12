@@ -54,16 +54,16 @@ function M.config()
                     [[defx#do_action('toggle_select') . 'j']],
                     N
                 )
+                buf_map(0, 'n', 'q', [[defx#do_action('quit')]], N)
                 buf_map(0, 'n', 'c', [[defx#do_action('copy')]], N)
                 buf_map(0, 'n', 'm', [[defx#do_action('move')]], N)
                 buf_map(0, 'n', 'p', [[defx#do_action('paste')]], N)
-                buf_map(0, 'n', 'N', [[defx#do_action('new_file')]], N)
                 buf_map(0, 'n', 'x', [[defx#do_action('remove')]], N)
                 buf_map(0, 'n', 'R', [[defx#do_action('rename')]], N)
-                buf_map(0, 'n', 'r', [[defx#do_action('clear_clipboard') . defx#do_action('redraw')]], N)
-                buf_map(0, 'n', 'O', [[defx#do_action('execute_system')]], N)
-                buf_map(0, 'n', 'q', [[defx#do_action('quit')]], N)
                 buf_map(0, 'n', '<C-e>', [[defx#do_action('quit')]], N)
+                buf_map(0, 'n', 'N', [[defx#do_action('new_file')]], N)
+                buf_map(0, 'n', 'O', [[defx#do_action('execute_system')]], N)
+                buf_map(0, 'n', 'r', [[defx#do_action('clear_clipboard') . defx#do_action('redraw')]], N)
                 buf_map(
                     0,
                     'n',
@@ -96,12 +96,6 @@ function M.config()
                 )
             end
 
-            vim.api.nvim_set_keymap(
-                'n',
-                '<C-e>',
-                ':<C-u> Defx -buffer-name=tab`tabpagenr()`<CR>',
-                { noremap = true, silent = true }
-            )
         end,
         catch = function(errors)
             -- print('catch : ' .. errors)
