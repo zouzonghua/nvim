@@ -98,7 +98,7 @@ return packer.startup(function(use)
     }
     use {
         'editorconfig/editorconfig-vim',
-        ft = { 'typescript', 'javascript', 'html', 'css' },
+        ft = { 'typescriptreact', 'typescript', 'javascript', 'html', 'css' },
     }
     use {
         'ybian/smartim',
