@@ -36,7 +36,6 @@ sh <(curl -L https://github.com/zouzonghua/nvim/raw/lua/utils/install.sh)
 - editorconfig-vim <https://github.com/editorconfig/editorconfig-vim>
 - nvim-treesitter <https://github.com/nvim-treesitter/nvim-treesitter>
 - smartim <https://github.com/ybian/smartim>
-- vim-beancount <https://github.com/nathangrigg/vim-beancount>
 
 ### Terminal
 

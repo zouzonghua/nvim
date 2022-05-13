@@ -10,7 +10,7 @@ if not lspconfig_status_ok then
 end
 
 lsp_installer.setup {
-  automatic_installation = true,
+  automatic_installation = false,
 }
 
 local opts = {
@@ -24,11 +24,15 @@ local stylelint_lsp_opts = require 'plugins.lsp.settings.stylelint_lsp'
 local jsonls_opts = require 'plugins.lsp.settings.jsonls'
 local sumneko_opts = require 'plugins.lsp.settings.sumneko_lua'
 
+-- TODO
+-- local beancount_opts = require 'plugins.lsp.settings.beancount'
+-- lspconfig.beancount.setup(deep_clone(beancount_opts))
+
 local deep_clone = function(settings)
   return vim.tbl_deep_extend('force', settings, opts)
 end
 
 lspconfig.tsserver.setup(opts)
 lspconfig.jsonls.setup(deep_clone(jsonls_opts))
-lspconfig.stylelint_lsp.setup(deep_clone(stylelint_lsp_opts))
 lspconfig.sumneko_lua.setup(deep_clone(sumneko_opts))
+lspconfig.stylelint_lsp.setup(deep_clone(stylelint_lsp_opts))

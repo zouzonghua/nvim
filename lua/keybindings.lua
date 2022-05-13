@@ -50,15 +50,3 @@ utils.map('n', '<Leader>2', ':BufferLineGoToBuffer 2<CR>')
 utils.map('n', '<Leader>3', ':BufferLineGoToBuffer 3<CR>')
 utils.map('n', '<Leader>4', ':BufferLineGoToBuffer 4<CR>')
 
--- eslint_d
-vim.cmd [[
-      autocmd Filetype typescriptreact nmap <leader>fe mF:%!eslint_d --stdin --fix-to-stdout --stdin-filename %<CR>`F
-      autocmd Filetype javascriptreact nmap <leader>fe mF:%!eslint_d --stdin --fix-to-stdout --stdin-filename %<CR>`F
-      autocmd Filetype typescript nmap <leader>fe mF:%!eslint_d --stdin --fix-to-stdout --stdin-filename %<CR>`F
-      autocmd Filetype javascript nmap <leader>fe mF:%!eslint_d --stdin --fix-to-stdout --stdin-filename %<CR>`F
-    ]]
-
--- vim-beancount
-vim.cmd [[
-      autocmd Filetype beancount nmap <leader>ba :AlignCommodity<CR>
-    ]]

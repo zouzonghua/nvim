@@ -104,11 +104,6 @@ return packer.startup(function(use)
         'ybian/smartim',
         config = require('plugins.smartim').config(),
     }
-    use {
-        'nathangrigg/vim-beancount',
-        config = require('plugins.beancount').config(),
-        ft = { 'beancount' },
-    }
 
     -- Terminal
     use {
@@ -142,17 +137,8 @@ return packer.startup(function(use)
       {
           "neovim/nvim-lspconfig",
           config = require('plugins.lsp').config(),
-         --  config = function()
-         --      require("nvim-lsp-installer").setup {}
-         --      local lspconfig = require("lspconfig")
-         --      lspconfig.sumneko_lua.setup {}
-         --  end
       }
     }
-   --  use {
-   --      'neovim/nvim-lspconfig',
-   --      config = require('plugins.lsp').config(),
-   --  } -- enable LSP
     -- use 'williamboman/nvim-lsp-installer' -- simple to use language server installer
     use 'jose-elias-alvarez/null-ls.nvim' -- for formatters and linters
 
