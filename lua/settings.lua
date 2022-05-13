@@ -9,7 +9,6 @@ vim.opt.swapfile = false -- no swap file or vim.cmd('set noswapfile')
 -- Persistent undo history
 -- FIXME: Make this directory if it doesn't exist
 local undodir = vim.fn.stdpath("data") .. "/undodir"
-print(undodir)
 vim.opt.undofile = true
 vim.opt.undodir = undodir
 
