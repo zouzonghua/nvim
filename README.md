@@ -70,6 +70,6 @@ sh <(curl -L https://github.com/zouzonghua/nvim/raw/lua/utils/install.sh)
 - LuaSnip <https://github.com/L3MON4D3/LuaSnip>
 - friendly-snippets <https://github.com/rafamadriz/friendly-snippets>
 
-## # Colorscheme
+### ColorScheme
 
 - vim-code-dark <https://github.com/tomasiser/vim-code-dark>
