@@ -1,11 +1,10 @@
 return {
     settings = {
-
         Lua = {
             autoFixOnSave = true,
             autoFixOnFormat = true,
             diagnostics = {
-                globals = { 'vim' },
+                globals = { 'vim', 'hs' },
             },
             workspace = {
                 library = {

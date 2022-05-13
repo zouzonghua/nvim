@@ -13,9 +13,9 @@ end
 local M = {}
 
 function M.config()
-require 'plugins.lsp.lsp-installer'
-  require('plugins.lsp.handlers').setup()
-  require 'plugins.lsp.null-ls'
+    require 'plugins.lsp.lsp-installer'
+    require('plugins.lsp.handlers').setup()
+    require 'plugins.lsp.null-ls'
 end
 
 return M

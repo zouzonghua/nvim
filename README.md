@@ -1,13 +1,12 @@
 # nvim
+
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/zouzonghua/nvim/blob/main/LICENSE)
-
-my neovim setttings
-
+my neovim settings
 ![screenshot](./screenshot/202203221033.png)
 
 ## installation
 
-```
+```sh
 sh <(curl -L https://github.com/zouzonghua/nvim/raw/lua/utils/install.sh)
 ```
 
@@ -37,7 +36,6 @@ sh <(curl -L https://github.com/zouzonghua/nvim/raw/lua/utils/install.sh)
 - editorconfig-vim <https://github.com/editorconfig/editorconfig-vim>
 - nvim-treesitter <https://github.com/nvim-treesitter/nvim-treesitter>
 - smartim <https://github.com/ybian/smartim>
-- vim-beancount <https://github.com/nathangrigg/vim-beancount>
 
 ### Terminal
 
@@ -75,4 +73,3 @@ sh <(curl -L https://github.com/zouzonghua/nvim/raw/lua/utils/install.sh)
 ### ColorScheme
 
 - vim-code-dark <https://github.com/tomasiser/vim-code-dark>
-

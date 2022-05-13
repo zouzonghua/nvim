@@ -104,11 +104,6 @@ return packer.startup(function(use)
         'ybian/smartim',
         config = require('plugins.smartim').config(),
     }
-    use {
-        'nathangrigg/vim-beancount',
-        config = require('plugins.beancount').config(),
-        ft = { 'beancount' },
-    }
 
     -- Terminal
     use {
@@ -138,10 +133,13 @@ return packer.startup(function(use)
 
     -- LSP
     use {
-        'neovim/nvim-lspconfig',
-        config = require('plugins.lsp').config(),
-    } -- enable LSP
-    use 'williamboman/nvim-lsp-installer' -- simple to use language server installer
+      "williamboman/nvim-lsp-installer",
+      {
+          "neovim/nvim-lspconfig",
+          config = require('plugins.lsp').config(),
+      }
+    }
+    -- use 'williamboman/nvim-lsp-installer' -- simple to use language server installer
     use 'jose-elias-alvarez/null-ls.nvim' -- for formatters and linters
 
     -- Cmp

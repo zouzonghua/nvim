@@ -1,6 +1,10 @@
+local status_ok, cmp_nvim_lsp = pcall(require, 'cmp_nvim_lsp')
+if not status_ok then
+    return
+end
+
 local M = {}
 
--- TODO: backfill this to template
 M.setup = function()
     local signs = {
         { name = 'DiagnosticSignError', text = '' },
@@ -59,12 +63,12 @@ local function lsp_highlight_document(client)
     if client.resolved_capabilities.document_highlight then
         vim.api.nvim_exec(
             [[
-      augroup lsp_document_highlight
-        autocmd! * <buffer>
-        autocmd CursorHold <buffer> lua vim.lsp.buf.document_highlight()
-        autocmd CursorMoved <buffer> lua vim.lsp.buf.clear_references()
-      augroup END
-    ]],
+              augroup lsp_document_highlight
+                autocmd! * <buffer>
+                autocmd CursorHold <buffer> lua vim.lsp.buf.document_highlight()
+                autocmd CursorMoved <buffer> lua vim.lsp.buf.clear_references()
+              augroup END
+            ]],
             false
         )
     end
@@ -76,23 +80,23 @@ local function lsp_keymaps(bufnr)
         vim.api.nvim_buf_set_keymap(bufnr, 'n', lhs, rhs, opts)
     end
 
-    map('gD', '<cmd>lua vim.lsp.buf.declaration()<CR>')
+    map('<C-k>', '<cmd>lua vim.lsp.buf.hover()<CR>')
     map('gd', '<cmd>lua vim.lsp.buf.definition()<CR>')
-    map('K', '<cmd>lua vim.lsp.buf.hover()<CR>')
-    map('gi', '<cmd>lua vim.lsp.buf.implementation()<CR>')
-    map('<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>')
-    -- map(bufnr, "n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
-    map('gr', '<cmd>lua vim.lsp.buf.references()<CR>')
-    map('<leader>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>')
-    -- map(bufnr, "n", "<leader>f", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
     map('[e', '<cmd>lua vim.diagnostic.goto_prev({ border = "rounded" })<CR>')
     map(']e', '<cmd>lua vim.diagnostic.goto_next({ border = "rounded" })<CR>')
-    map(
-        'gl',
-        '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics({ border = "rounded" })<CR>'
-    )
     map('<leader>q', '<cmd>lua vim.diagnostic.setloclist()<CR>')
     map('<leader>fm', '<cmd>lua vim.lsp.buf.formatting()<CR>')
+    map('<leader>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>')
+    -- map('gi', '<cmd>lua vim.lsp.buf.implementation()<CR>')
+    -- map('K', '<cmd>lua vim.lsp.buf.signature_help()<CR>')
+    -- map('gD', '<cmd>lua vim.lsp.buf.declaration()<CR>')
+    -- map('gr', '<cmd>lua vim.lsp.buf.references()<CR>')
+    -- map(bufnr, "n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
+    -- map(bufnr, "n", "<leader>f", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
+    -- map(
+    --     'gl',
+    --     '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics({ border = "rounded" })<CR>'
+    -- )
     -- vim.cmd [[ command! Format execute 'lua vim.lsp.buf.formatting()' ]]
 end
 
@@ -108,12 +112,6 @@ M.on_attach = function(client, bufnr)
 end
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
-
-local status_ok, cmp_nvim_lsp = pcall(require, 'cmp_nvim_lsp')
-if not status_ok then
-    return
-end
-
 M.capabilities = cmp_nvim_lsp.update_capabilities(capabilities)
 
 return M
