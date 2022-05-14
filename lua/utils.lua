@@ -1,61 +1,61 @@
 local M = {}
 
 function M.buf_map(buf, mode, lhs, rhs, opts)
-    local options = { silent = true}
-    if opts then
-        options = vim.tbl_extend('force', options, opts)
-    end
-    vim.api.nvim_buf_set_keymap(buf, mode, lhs, rhs, options)
+  local options = { silent = true }
+  if opts then
+    options = vim.tbl_extend('force', options, opts)
+  end
+  vim.api.nvim_buf_set_keymap(buf, mode, lhs, rhs, options)
 end
 
 function M.map(mode, lhs, rhs, opts)
-    local options = { noremap = true, silent = true }
-    if opts then
-        options = vim.tbl_extend('force', options, opts)
-    end
-    vim.api.nvim_set_keymap(mode, lhs, rhs, options)
+  local options = { noremap = true, silent = true }
+  if opts then
+    options = vim.tbl_extend('force', options, opts)
+  end
+  vim.api.nvim_set_keymap(mode, lhs, rhs, options)
 end
 
 function M.load(plugin, ...)
-    local ok, module = pcall(require, plugin)
-    if ok then
-        module.setup(...)
-    end
+  local ok, module = pcall(require, plugin)
+  if ok then
+    module.setup(...)
+  end
 end
 
 function M.try(block)
-    local main = block.main
-    local catch = block.catch
-    local finally = block.finally
+  local main = block.main
+  local catch = block.catch
+  local finally = block.finally
 
-    assert(main)
+  assert(main)
 
-    -- try to call it
-    local ok, errors = xpcall(main, debug.traceback)
-    if not ok then
-        -- run the catch function
-        if catch then
-            catch(errors)
-        end
+  -- try to call it
+  local ok, errors = xpcall(main, debug.traceback)
+  if not ok then
+    -- run the catch function
+    if catch then
+      catch(errors)
     end
+  end
 
-    -- run the finally function
-    if finally then
-        finally(ok, errors)
-    end
+  -- run the finally function
+  if finally then
+    finally(ok, errors)
+  end
 
-    -- ok?
-    if ok then
-        return errors
-    end
+  -- ok?
+  if ok then
+    return errors
+  end
 end
 
 function M.emptyConfig()
-    local _M = {}
-    function _M.config()
-    end
+  local _M = {}
+  function _M.config()
+  end
 
-    return _M
+  return _M
 end
 
 return M

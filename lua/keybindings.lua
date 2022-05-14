@@ -7,8 +7,8 @@ vim.keymap.set('c', '<M-f>', '<S-Right>')
 vim.keymap.set('c', '<M-b>', '<S-Left>')
 
 -- move selected line
-vim.keymap.set('v', 'K', [[<cmd>m '<-2<CR>gv=gv]])
-vim.keymap.set('v', 'J', [[<cmd>m '>+1<CR>gv=gv]])
+vim.keymap.set('v', 'K', ":m -2<CR>gv=gv")
+vim.keymap.set('v', 'J', ":m +1<CR>gv=gv")
 
 -- search
 vim.keymap.set('n', '<Enter>', "<cmd>nohlsearch<Enter><Enter>")
@@ -36,4 +36,3 @@ vim.keymap.set('n', '<Leader>1', '<cmd>BufferLineGoToBuffer 1<CR>')
 vim.keymap.set('n', '<Leader>2', '<cmd>BufferLineGoToBuffer 2<CR>')
 vim.keymap.set('n', '<Leader>3', '<cmd>BufferLineGoToBuffer 3<CR>')
 vim.keymap.set('n', '<Leader>4', '<cmd>BufferLineGoToBuffer 4<CR>')
-

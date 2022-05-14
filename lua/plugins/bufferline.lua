@@ -1,83 +1,55 @@
 local utils = require 'utils'
 
-local status, bufferline = pcall(require, 'bufferline')
-if not status then
-    return utils.emptyConfig()
+local bufferline_status, bufferline = pcall(require, 'bufferline')
+if not bufferline_status then
+  return utils.emptyConfig()
 end
 
 local M = {}
 
 function M.config()
-    _G.zzh = {}
-    bufferline.setup {
-        options = {
-            numbers = function(opts)
-                return string.format('%s.', opts.ordinal, opts.id)
-            end,
-            diagnostics = 'nvim_lsp',
-            diagnostics_indicator = function(count, level, diagnostics_dict, context)
-                return '(' .. count .. ')'
-            end,
-            show_close_icon = false,
-            offsets = {
-                {
-                    filetype = 'NvimTree',
-                    text = 'File Explorer',
-                    text_align = 'center',
-                },
-            },
-            sort_by = function(buffer_a, buffer_b)
-                -- add custom logic
-                return buffer_a.ordinal < buffer_b.ordinal
-            end,
+  bufferline.setup {
+    options = {
+      numbers = function(opts)
+        return string.format('%s.', opts.ordinal, opts.id)
+      end,
+      diagnostics = 'nvim_lsp',
+      diagnostics_indicator = function(count)
+        return '(' .. count .. ')'
+      end,
+      show_close_icon = false,
+      offsets = {
+        {
+          filetype = 'NvimTree',
+          text = 'File Explorer',
+          text_align = 'center',
         },
-    }
+      },
+      sort_by = function(buffer_a, buffer_b)
+        return buffer_a.ordinal < buffer_b.ordinal
+      end,
+    },
+  }
 
-    local function close_buffer()
-        if
-            vim.fn.winnr() == vim.fn.winnr '$'
-            and vim.api.nvim_win_get_number(0) > 1
-        then
-            vim.cmd 'Defx -buffer-name=tab`tabpagenr()`'
-            vim.cmd 'bd'
-            vim.cmd 'Defx -buffer-name=tab`tabpagenr()`'
-            vim.cmd 'wincmd l'
-        else
-            vim.cmd 'bd'
-        end
+  _G.zzh = {}
+  _G.zzh.close_buffer = function()
+    if vim.fn.winnr() == vim.fn.winnr '$'
+        and vim.api.nvim_win_get_number(0) > 1
+    then
+      vim.cmd 'Defx -buffer-name=tab`tabpagenr()`'
+      vim.cmd 'bd'
+      vim.cmd 'Defx -buffer-name=tab`tabpagenr()`'
+      vim.cmd 'wincmd l'
+    else
+      vim.cmd 'bd'
     end
+  end
 
-    _G.zzh.close_buffer = close_buffer
 
-    local map = vim.api.nvim_set_keymap
-    local N = { noremap = true, silent = true }
-    map('n', '<C-c>', ':lua zzh.close_buffer()<CR>', N)
+  local map = vim.api.nvim_set_keymap
+  local N = { noremap = true, silent = true }
+  map('n', '<C-c>', ':lua _G.zzh.close_buffer()<CR>', N)
 end
 
 return M
 
--- debugger code
--- print(vim.nvim_win_get_number(vim.nvim_tabpage_get_win(vim.api.nvim_get_current_tabpage())))
--- print(vim.nvim_tabpage_get_win(vim.api.nvim_get_current_tabpage()))
--- print(vim.api.nvim_get_current_tabpage())
--- nvim_get_current_win()
--- vim.api.nvim_win_get_number(vim.api.nvim_get_current_win())
---  vim.api.nvim_get_current_buf()
---   function! s:close_buffer()
---     let window_counter = 0
---     windo let window_counter = window_counter + 1
---     echo window_counter
---     " 判断窗口数量 https://stackoverflow.com/questions/4198503/number-of-windows-in-vim
---     if window_counter == 1
---        :bd
---     elseif window_counter == 2
---        Defx -buffer-name=tab`tabpagenr()`
---        :bd
---        Defx -buffer-name=tab`tabpagenr()`
---        :wincmd l
---     else
---       :q
---     endif
---   endfunction
-
---

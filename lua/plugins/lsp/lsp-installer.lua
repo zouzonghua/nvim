@@ -14,7 +14,6 @@ lsp_installer.setup {
 }
 
 local handlers = require('plugins.lsp.handlers')
-
 local opts = {
   on_attach = handlers.on_attach,
   capabilities = handlers.capabilities,
@@ -24,11 +23,8 @@ local opts = {
 }
 local jsonls_opts = require 'plugins.lsp.settings.jsonls'
 local sumneko_opts = require 'plugins.lsp.settings.sumneko_lua'
+local beancount_opts = require 'plugins.lsp.settings.beancount'
 local stylelint_lsp_opts = require 'plugins.lsp.settings.stylelint_lsp'
-
--- TODO
--- local beancount_opts = require 'plugins.lsp.settings.beancount'
--- lspconfig.beancount.setup(deep_clone(beancount_opts))
 
 local deep_clone = function(settings)
   return vim.tbl_deep_extend('force', settings, opts)
@@ -36,5 +32,6 @@ end
 
 lspconfig.tsserver.setup(opts)
 lspconfig.jsonls.setup(deep_clone(jsonls_opts))
+lspconfig.beancount.setup(deep_clone(beancount_opts))
 lspconfig.sumneko_lua.setup(deep_clone(sumneko_opts))
 lspconfig.stylelint_lsp.setup(deep_clone(stylelint_lsp_opts))
