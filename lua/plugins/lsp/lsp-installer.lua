@@ -25,8 +25,8 @@ local sumneko_opts = require 'plugins.lsp.settings.sumneko_lua'
 local beancount_opts = require 'plugins.lsp.settings.beancount'
 local stylelint_lsp_opts = require 'plugins.lsp.settings.stylelint_lsp'
 
-local deep_clone = function(settings)
-  return vim.tbl_deep_extend('force', settings, opts)
+local deep_clone = function(extraOpts)
+  return vim.tbl_deep_extend('force', extraOpts, opts)
 end
 
 lspconfig.tsserver.setup(opts)
