@@ -5,11 +5,13 @@ vim.g.mapleader = ','
 vim.o.mouse = 'a' -- mouse support
 vim.opt.clipboard = { 'unnamedplus' } -- system clipboard
 vim.opt.swapfile = false -- no swap file or vim.cmd('set noswapfile')
--- Persistent undo history
--- FIXME: Make this directory if it doesn't exist
-local undodir = vim.fn.stdpath("data") .. "/undodir"
-vim.opt.undofile = true
+
+--------------------------------------------------------------------------------
+-- Undodir
+--------------------------------------------------------------------------------
+local undodir = vim.fn.stdpath("data") .. "/undodir" -- make this directory if it doesn't exist
 vim.opt.undodir = undodir
+vim.opt.undofile = true -- persistent undo history
 
 --------------------------------------------------------------------------------
 -- Appearance
@@ -64,16 +66,6 @@ vim.opt.listchars = 'tab:»■,trail:■' -- 多余的空格（包括 Tab 键）
 
 --------------------------------------------------------------------------------
 -- Folding
---
--- foldmethod:
--- manual           手工定义折叠
--- indent           更多的缩进表示更高级别的折叠
--- expr             用表达式来定义折叠
--- syntax           用语法高亮来定义折叠
--- diff             对没有更改的文本进行折叠
--- marker           对文中的标志折叠
---
--- keymappings
 -- zc 关闭当前 zo 打开当前 zO 打开当前以及嵌套
 -- zM 关闭所有 zR 打开所有
 --------------------------------------------------------------------------------
@@ -81,6 +73,6 @@ vim.wo.foldmethod = 'indent'
 -- vim.wo.foldmethod = 'marker'
 -- vim.wo.foldmethod = 'expr'
 -- vim.wo.foldexpr = 'nvim_treesitter#foldexpr()'
-vim.opt.foldlevel = 99 -- 折叠层级
+vim.opt.foldlevel = 99
 vim.foldlevelstart = 99
 
