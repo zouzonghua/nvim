@@ -10,7 +10,7 @@ list['codedark'] = [[
 local themes = {}
 
 function themes.switchColorScheme(name)
-    vim.cmd(list[name])
+  vim.cmd(list[name])
 end
 
 themes.switchColorScheme 'codedark'

@@ -22,14 +22,14 @@ vim.o.number = true -- display line number
 vim.o.cursorline = true -- Enable highlighting of the current line
 vim.o.termguicolors = true -- true color
 vim.opt.fillchars = { -- hidden ~
-    vert = '▕', -- alternatives │
-    fold = ' ',
-    eob = ' ', -- suppress ~ at EndOfBuffer
-    diff = '╱', -- alternatives = ⣿ ░ ─
-    msgsep = '‾',
-    foldopen = '▾',
-    foldsep = '│',
-    foldclose = '▸',
+  vert = '▕', -- alternatives │
+  fold = ' ',
+  eob = ' ', -- suppress ~ at EndOfBuffer
+  diff = '╱', -- alternatives = ⣿ ░ ─
+  msgsep = '‾',
+  foldopen = '▾',
+  foldsep = '│',
+  foldclose = '▸',
 }
 
 --------------------------------------------------------------------------------
@@ -75,4 +75,3 @@ vim.opt.listchars = 'tab:»■,trail:■' -- Spaces (including Tab) show small s
 vim.wo.foldmethod = 'indent'
 vim.opt.foldlevel = 99
 vim.foldlevelstart = 99
-

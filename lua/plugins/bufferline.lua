@@ -2,56 +2,55 @@ local utils = require 'utils'
 
 local status, bufferline = pcall(require, 'bufferline')
 if not status then
-    return utils.emptyConfig()
+  return utils.emptyConfig()
 end
 
 local M = {}
 
 function M.config()
-    _G.zzh = {}
-    bufferline.setup {
-        options = {
-            numbers = function(opts)
-                return string.format('%s.', opts.ordinal, opts.id)
-            end,
-            diagnostics = 'nvim_lsp',
-            diagnostics_indicator = function(count, level, diagnostics_dict, context)
-                return '(' .. count .. ')'
-            end,
-            show_close_icon = false,
-            offsets = {
-                {
-                    filetype = 'NvimTree',
-                    text = 'File Explorer',
-                    text_align = 'center',
-                },
-            },
-            sort_by = function(buffer_a, buffer_b)
-                -- add custom logic
-                return buffer_a.ordinal < buffer_b.ordinal
-            end,
+  _G.zzh = {}
+  bufferline.setup {
+    options = {
+      numbers = function(opts)
+        return string.format('%s.', opts.ordinal, opts.id)
+      end,
+      diagnostics = 'nvim_lsp',
+      diagnostics_indicator = function(count, level, diagnostics_dict, context)
+        return '(' .. count .. ')'
+      end,
+      show_close_icon = false,
+      offsets = {
+        {
+          filetype = 'NvimTree',
+          text = 'File Explorer',
+          text_align = 'center',
         },
-    }
+      },
+      sort_by = function(buffer_a, buffer_b)
+        -- add custom logic
+        return buffer_a.ordinal < buffer_b.ordinal
+      end,
+    },
+  }
 
-    local function close_buffer()
-        if
-            vim.fn.winnr() == vim.fn.winnr '$'
-            and vim.api.nvim_win_get_number(0) > 1
-        then
-            vim.cmd 'Defx -buffer-name=tab`tabpagenr()`'
-            vim.cmd 'bd'
-            vim.cmd 'Defx -buffer-name=tab`tabpagenr()`'
-            vim.cmd 'wincmd l'
-        else
-            vim.cmd 'bd'
-        end
+  local function close_buffer()
+    if vim.fn.winnr() == vim.fn.winnr '$'
+        and vim.api.nvim_win_get_number(0) > 1
+    then
+      vim.cmd 'Defx -buffer-name=tab`tabpagenr()`'
+      vim.cmd 'bd'
+      vim.cmd 'Defx -buffer-name=tab`tabpagenr()`'
+      vim.cmd 'wincmd l'
+    else
+      vim.cmd 'bd'
     end
+  end
 
-    _G.zzh.close_buffer = close_buffer
+  _G.zzh.close_buffer = close_buffer
 
-    local map = vim.api.nvim_set_keymap
-    local N = { noremap = true, silent = true }
-    map('n', '<C-c>', ':lua zzh.close_buffer()<CR>', N)
+  local map = vim.api.nvim_set_keymap
+  local N = { noremap = true, silent = true }
+  map('n', '<C-c>', ':lua zzh.close_buffer()<CR>', N)
 end
 
 return M
