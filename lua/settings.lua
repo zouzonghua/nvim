@@ -6,20 +6,12 @@ vim.g.mapleader = ','
 vim.o.mouse = 'a' -- mouse support
 vim.opt.clipboard = { 'unnamedplus' } -- system clipboard
 vim.opt.swapfile = false -- no swap file or vim.cmd('set noswapfile')
-
 -- Persistent undo history
 -- FIXME: Make this directory if it doesn't exist
 local undodir = vim.fn.stdpath("data") .. "/undodir"
 vim.opt.undofile = true
 vim.opt.undodir = undodir
 
--- add filetype
-vim.g.do_filetype_lua = 1
-vim.filetype.add({
-  extension = {
-    bean = "beancount",
-  }
-})
 --------------------------------------------------------------------------------
 -- Appearance
 --------------------------------------------------------------------------------
@@ -45,10 +37,18 @@ vim.opt.fillchars = { -- hidden ~
 -- vim.o.ruler = true -- show the cursor position all the time
 
 --------------------------------------------------------------------------------
--- file encoding
+-- file encoding & file type
 --------------------------------------------------------------------------------
 vim.o.encoding = 'utf-8'
 vim.o.fileencoding = 'utf-8'
+
+-- add filetype
+vim.g.do_filetype_lua = 1
+vim.filetype.add({
+  extension = {
+    bean = "beancount",
+  }
+})
 
 --------------------------------------------------------------------------------
 -- Search
