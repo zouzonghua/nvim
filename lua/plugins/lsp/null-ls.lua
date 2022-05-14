@@ -21,7 +21,7 @@ null_ls.setup {
         'css',
         'less',
         'scss',
-        -- 'markdown',
+        'markdown',
         'html',
       },
     }),

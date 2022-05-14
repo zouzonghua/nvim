@@ -10,19 +10,21 @@ if not lspconfig_status_ok then
 end
 
 lsp_installer.setup {
-  automatic_installation = false,
+  automatic_installation = true,
 }
 
+local handlers = require('plugins.lsp.handlers')
+
 local opts = {
-  on_attach = require('plugins.lsp.handlers').on_attach,
-  capabilities = require('plugins.lsp.handlers').capabilities,
+  on_attach = handlers.on_attach,
+  capabilities = handlers.capabilities,
   flags = {
     debounce_text_changes = 150,
   },
 }
-local stylelint_lsp_opts = require 'plugins.lsp.settings.stylelint_lsp'
 local jsonls_opts = require 'plugins.lsp.settings.jsonls'
 local sumneko_opts = require 'plugins.lsp.settings.sumneko_lua'
+local stylelint_lsp_opts = require 'plugins.lsp.settings.stylelint_lsp'
 
 -- TODO
 -- local beancount_opts = require 'plugins.lsp.settings.beancount'

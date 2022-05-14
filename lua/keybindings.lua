@@ -1,52 +1,39 @@
-local utils = require 'utils'
-
 -- command mode
-utils.map('c', '<C-a>', '<Home>')
-utils.map('c', '<C-e>', '<End>')
-utils.map('c', '<C-f>', '<Right>')
-utils.map('c', '<C-b>', '<Left>')
-utils.map('c', '<M-f>', '<S-Right>')
-utils.map('c', '<M-b>', '<S-Left>')
+vim.keymap.set('c', '<C-a>', '<Home>')
+vim.keymap.set('c', '<C-e>', '<End>')
+vim.keymap.set('c', '<C-f>', '<Right>')
+vim.keymap.set('c', '<C-b>', '<Left>')
+vim.keymap.set('c', '<M-f>', '<S-Right>')
+vim.keymap.set('c', '<M-b>', '<S-Left>')
 
 -- move selected line
-utils.map('v', 'J', [[:m '>+1<CR>gv=gv]])
-utils.map('v', 'K', [[:m '<-2<CR>gv=gv]])
+vim.keymap.set('v', 'K', [[<cmd>m '<-2<CR>gv=gv]])
+vim.keymap.set('v', 'J', [[<cmd>m '>+1<CR>gv=gv]])
 
 -- search
-utils.map('n', '<Enter>', ':nohlsearch<Enter><Enter>')
+vim.keymap.set('n', '<Enter>', "<cmd>nohlsearch<Enter><Enter>")
 
 -- neoterm
-utils.map('n', '<C-y>', ':Ttoggle<CR>')
-utils.map('t', '<C-y>', '<C-\\><C-N>:Ttoggle<CR>')
-utils.map('t', '<esc>', [[<C-\><C-n>]])
+vim.keymap.set('n', '<C-y>', "<cmd>Ttoggle<CR>")
+vim.keymap.set('t', '<C-y>', "<C-\\><C-N>:Ttoggle<CR>")
+vim.keymap.set('t', '<esc>', [[<C-\><C-n>]])
 
 -- telescope
-utils.map(
-    'n',
-    '<leader>ff',
-    ':lua require("telescope.builtin").find_files()<cr>'
-)
-utils.map(
-    'n',
-    '<leader>fg',
-    ':lua require("telescope.builtin").live_grep()<cr>'
-)
-utils.map(
-    'n',
-    '<leader>fh',
-    ':lua require("telescope.builtin").help_tags()<cr>'
-)
+local telescope = require("telescope.builtin")
+vim.keymap.set('n', 'ff', telescope.find_files)
+vim.keymap.set('n', 'fg', telescope.live_grep)
+vim.keymap.set('n', 'fh', telescope.help_tags)
 
 -- defx
-utils.map('n', '<C-e>', ':<C-u> Defx -buffer-name=tab`tabpagenr()`<CR>')
+vim.keymap.set('n', '<C-e>', '<cmd> Defx -buffer-name=tab`tabpagenr()`<CR>')
 
 -- bufferline
-utils.map('n', '<C-l>', ':BufferLineCycleNext<CR>')
-utils.map('n', '<C-h>', ':BufferLineCyclePrev<CR>')
-utils.map('n', '<Leader>ll', ':BufferLineCloseRight<CR>')
-utils.map('n', '<Leader>hh', ':BufferLineCloseLeft<CR>')
-utils.map('n', '<Leader>1', ':BufferLineGoToBuffer 1<CR>')
-utils.map('n', '<Leader>2', ':BufferLineGoToBuffer 2<CR>')
-utils.map('n', '<Leader>3', ':BufferLineGoToBuffer 3<CR>')
-utils.map('n', '<Leader>4', ':BufferLineGoToBuffer 4<CR>')
+vim.keymap.set('n', '<C-l>', '<cmd>BufferLineCycleNext<CR>')
+vim.keymap.set('n', '<C-h>', '<cmd>BufferLineCyclePrev<CR>')
+vim.keymap.set('n', '<Leader>ll', '<cmd>BufferLineCloseRight<CR>')
+vim.keymap.set('n', '<Leader>hh', '<cmd>BufferLineCloseLeft<CR>')
+vim.keymap.set('n', '<Leader>1', '<cmd>BufferLineGoToBuffer 1<CR>')
+vim.keymap.set('n', '<Leader>2', '<cmd>BufferLineGoToBuffer 2<CR>')
+vim.keymap.set('n', '<Leader>3', '<cmd>BufferLineGoToBuffer 3<CR>')
+vim.keymap.set('n', '<Leader>4', '<cmd>BufferLineGoToBuffer 4<CR>')
 

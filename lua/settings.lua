@@ -1,15 +1,13 @@
-vim.g.mapleader = ','
-
 --------------------------------------------------------------------------------
 -- General
 --------------------------------------------------------------------------------
+vim.g.mapleader = ','
 vim.o.mouse = 'a' -- mouse support
 vim.opt.clipboard = { 'unnamedplus' } -- system clipboard
 vim.opt.swapfile = false -- no swap file or vim.cmd('set noswapfile')
 -- Persistent undo history
 -- FIXME: Make this directory if it doesn't exist
 local undodir = vim.fn.stdpath("data") .. "/undodir"
-print(undodir)
 vim.opt.undofile = true
 vim.opt.undodir = undodir
 
@@ -32,16 +30,19 @@ vim.opt.fillchars = { -- hidden ~
     foldclose = '▸',
 }
 
--- vim.o.showcmd = true -- display incomplete commands
--- vim.o.backspace = '2' -- Backspace deletes like most programs in insert mode
--- vim.o.laststatus = 2 -- Always display the status line
--- vim.o.ruler = true -- show the cursor position all the time
-
 --------------------------------------------------------------------------------
--- file encoding
+-- file encoding & file type
 --------------------------------------------------------------------------------
 vim.o.encoding = 'utf-8'
 vim.o.fileencoding = 'utf-8'
+
+-- add filetype
+vim.g.do_filetype_lua = 1
+vim.filetype.add({
+  extension = {
+    bean = "beancount",
+  }
+})
 
 --------------------------------------------------------------------------------
 -- Search
@@ -76,8 +77,8 @@ vim.opt.listchars = 'tab:»■,trail:■' -- 多余的空格（包括 Tab 键）
 -- zc 关闭当前 zo 打开当前 zO 打开当前以及嵌套
 -- zM 关闭所有 zR 打开所有
 --------------------------------------------------------------------------------
--- vim.wo.foldmethod = 'marker'
 vim.wo.foldmethod = 'indent'
+-- vim.wo.foldmethod = 'marker'
 -- vim.wo.foldmethod = 'expr'
 -- vim.wo.foldexpr = 'nvim_treesitter#foldexpr()'
 vim.opt.foldlevel = 99 -- 折叠层级
