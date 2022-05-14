@@ -1,8 +1,7 @@
-vim.g.mapleader = ','
-
 --------------------------------------------------------------------------------
 -- General
 --------------------------------------------------------------------------------
+vim.g.mapleader = ','
 vim.o.mouse = 'a' -- mouse support
 vim.opt.clipboard = { 'unnamedplus' } -- system clipboard
 vim.opt.swapfile = false -- no swap file or vim.cmd('set noswapfile')
