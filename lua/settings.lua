@@ -30,11 +30,6 @@ vim.opt.fillchars = { -- hidden ~
     foldclose = '▸',
 }
 
--- vim.o.showcmd = true -- display incomplete commands
--- vim.o.backspace = '2' -- Backspace deletes like most programs in insert mode
--- vim.o.laststatus = 2 -- Always display the status line
--- vim.o.ruler = true -- show the cursor position all the time
-
 --------------------------------------------------------------------------------
 -- file encoding & file type
 --------------------------------------------------------------------------------
@@ -82,8 +77,8 @@ vim.opt.listchars = 'tab:»■,trail:■' -- 多余的空格（包括 Tab 键）
 -- zc 关闭当前 zo 打开当前 zO 打开当前以及嵌套
 -- zM 关闭所有 zR 打开所有
 --------------------------------------------------------------------------------
--- vim.wo.foldmethod = 'marker'
 vim.wo.foldmethod = 'indent'
+-- vim.wo.foldmethod = 'marker'
 -- vim.wo.foldmethod = 'expr'
 -- vim.wo.foldexpr = 'nvim_treesitter#foldexpr()'
 vim.opt.foldlevel = 99 -- 折叠层级
