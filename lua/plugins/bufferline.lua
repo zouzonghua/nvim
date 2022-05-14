@@ -48,7 +48,7 @@ function M.config()
 
   local map = vim.api.nvim_set_keymap
   local N = { noremap = true, silent = true }
-  map('n', '<C-c>', ':lua zzh.close_buffer()<CR>', N)
+  map('n', '<C-c>', ':lua _G.zzh.close_buffer()<CR>', N)
 end
 
 return M
