@@ -55,24 +55,24 @@ vim.o.incsearch = true -- do incremental searching
 vim.o.smartcase = true -- overrides ignorecase when pattern contains caps
 
 --------------------------------------------------------------------------------
--- Tabs and spaces
+-- Tabs & spaces
 --------------------------------------------------------------------------------
-vim.o.tabstop = 2 -- 按下 Tab 键时，Vim 显示的空格数
-vim.o.shiftwidth = 2 -- 表示每一级缩进的长度
-vim.o.softtabstop = 2 -- 退格键退回缩进空格的长度
-vim.o.expandtab = true -- 设置缩进用空格来表示
-vim.opt.list = true -- 显示非可见字符
-vim.opt.listchars = 'tab:»■,trail:■' -- 多余的空格（包括 Tab 键）显示小方块
+vim.o.tabstop = 2 -- The number of spaces that Vim displays when pressing the Tab key
+vim.o.shiftwidth = 2 -- Indicates the length of each indentation level
+vim.o.softtabstop = 2 -- Backspace key back the length of indented spaces
+vim.o.expandtab = true -- use spaces
+vim.opt.list = true -- Show invisible characters
+vim.opt.listchars = 'tab:»■,trail:■' -- Spaces (including Tab) show small squares
 
 --------------------------------------------------------------------------------
 -- Folding
--- zc 关闭当前 zo 打开当前 zO 打开当前以及嵌套
--- zM 关闭所有 zR 打开所有
+-- zc close current folding
+-- zo open current folding
+-- zO open current and nested
+-- zM close all
+-- zR open all
 --------------------------------------------------------------------------------
 vim.wo.foldmethod = 'indent'
--- vim.wo.foldmethod = 'marker'
--- vim.wo.foldmethod = 'expr'
--- vim.wo.foldexpr = 'nvim_treesitter#foldexpr()'
 vim.opt.foldlevel = 99
 vim.foldlevelstart = 99
 
