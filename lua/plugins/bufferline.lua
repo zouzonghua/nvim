@@ -31,8 +31,7 @@ function M.config()
     },
   }
 
-  _G.zzh = {}
-  _G.zzh.close_buffer = function()
+  _G.close_buffer = function()
     if vim.fn.winnr() == vim.fn.winnr '$'
         and vim.api.nvim_win_get_number(0) > 1
     then
@@ -48,7 +47,7 @@ function M.config()
 
   local map = vim.api.nvim_set_keymap
   local N = { noremap = true, silent = true }
-  map('n', '<C-c>', ':lua _G.zzh.close_buffer()<CR>', N)
+  map('n', '<C-c>', ':lua _G.close_buffer()<CR>', N)
 end
 
 return M

@@ -31,7 +31,7 @@ function M.config()
         vim.api.nvim_buf_set_keymap(0, 'n', lhs, rhs, options)
       end
 
-      _G.zzh.defx_settings = function()
+      _G.defx_settings = function()
         vim.cmd 'setl nonumber'
         buf_map('h', [[defx#do_action('cd', ['..'])]])
         buf_map('l', [[defx#do_action('drop')]])
@@ -51,7 +51,7 @@ function M.config()
         buf_map('<', [[defx#do_action('resize',defx#get_context().winwidth - 10)]])
       end
 
-      vim.cmd 'autocmd FileType defx lua _G.zzh.defx_settings()'
+      vim.cmd 'autocmd FileType defx lua _G.defx_settings()'
     end,
     catch = function()
       -- print('catch : ' .. errors)
