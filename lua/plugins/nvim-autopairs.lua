@@ -7,7 +7,10 @@ end
 local M = {}
 
 function M.config()
-  autopairs.setup { disable_filetype = { 'TelescopePrompt', 'vim' } }
+  autopairs.setup {
+    map_c_w = true,
+    map_c_h = true,
+  }
 end
 
 return M
