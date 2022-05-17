@@ -29,6 +29,7 @@ local deep_clone = function(extraOpts)
   return vim.tbl_deep_extend('force', extraOpts, opts)
 end
 
+lspconfig.cssls.setup(opts)
 lspconfig.tsserver.setup(opts)
 lspconfig.jsonls.setup(deep_clone(jsonls_opts))
 lspconfig.beancount.setup(deep_clone(beancount_opts))
