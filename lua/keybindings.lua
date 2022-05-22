@@ -7,11 +7,21 @@ vim.keymap.set('c', '<M-f>', '<S-Right>')
 vim.keymap.set('c', '<M-b>', '<S-Left>')
 
 -- move selected line
-vim.keymap.set('v', 'K', ":m -2<CR>gv=gv")
-vim.keymap.set('v', 'J', ":m +1<CR>gv=gv")
+vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv")
+vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv")
 
 -- search
 vim.keymap.set('n', '<Enter>', "<cmd>nohlsearch<Enter><Enter>")
+
+-- bufferline
+vim.keymap.set('n', '<C-l>', '<cmd>BufferLineCycleNext<CR>')
+vim.keymap.set('n', '<C-h>', '<cmd>BufferLineCyclePrev<CR>')
+vim.keymap.set('n', '<Leader>ll', '<cmd>BufferLineCloseRight<CR>')
+vim.keymap.set('n', '<Leader>hh', '<cmd>BufferLineCloseLeft<CR>')
+vim.keymap.set('n', '<Leader>1', '<cmd>BufferLineGoToBuffer 1<CR>')
+vim.keymap.set('n', '<Leader>2', '<cmd>BufferLineGoToBuffer 2<CR>')
+vim.keymap.set('n', '<Leader>3', '<cmd>BufferLineGoToBuffer 3<CR>')
+vim.keymap.set('n', '<Leader>4', '<cmd>BufferLineGoToBuffer 4<CR>')
 
 -- neoterm
 vim.keymap.set('n', '<C-y>', "<cmd>Ttoggle<CR>")
@@ -26,13 +36,3 @@ vim.keymap.set('n', '<Leader>fh', telescope.help_tags)
 
 -- defx
 vim.keymap.set('n', '<C-e>', '<cmd> Defx -buffer-name=tab`tabpagenr()`<CR>')
-
--- bufferline
-vim.keymap.set('n', '<C-l>', '<cmd>BufferLineCycleNext<CR>')
-vim.keymap.set('n', '<C-h>', '<cmd>BufferLineCyclePrev<CR>')
-vim.keymap.set('n', '<Leader>ll', '<cmd>BufferLineCloseRight<CR>')
-vim.keymap.set('n', '<Leader>hh', '<cmd>BufferLineCloseLeft<CR>')
-vim.keymap.set('n', '<Leader>1', '<cmd>BufferLineGoToBuffer 1<CR>')
-vim.keymap.set('n', '<Leader>2', '<cmd>BufferLineGoToBuffer 2<CR>')
-vim.keymap.set('n', '<Leader>3', '<cmd>BufferLineGoToBuffer 3<CR>')
-vim.keymap.set('n', '<Leader>4', '<cmd>BufferLineGoToBuffer 4<CR>')
