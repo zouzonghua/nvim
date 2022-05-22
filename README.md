@@ -7,7 +7,7 @@ my neovim settings
 ## installation
 
 ```sh
-sh <(curl -L https://github.com/zouzonghua/nvim/raw/lua/utils/install.sh)
+sh <(curl -L https://github.com/zouzonghua/nvim/raw/lua/install.sh)
 ```
 
 ## plugin
