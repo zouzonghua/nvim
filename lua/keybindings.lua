@@ -20,9 +20,9 @@ vim.keymap.set('t', '<esc>', [[<C-\><C-n>]])
 
 -- telescope
 local telescope = require("telescope.builtin")
-vim.keymap.set('n', 'ff', telescope.find_files)
-vim.keymap.set('n', 'fg', telescope.live_grep)
-vim.keymap.set('n', 'fh', telescope.help_tags)
+vim.keymap.set('n', '<Leader>ff', telescope.find_files)
+vim.keymap.set('n', '<Leader>fg', telescope.live_grep)
+vim.keymap.set('n', '<Leader>fh', telescope.help_tags)
 
 -- defx
 vim.keymap.set('n', '<C-e>', '<cmd> Defx -buffer-name=tab`tabpagenr()`<CR>')
