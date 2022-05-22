@@ -1,5 +1,4 @@
 nvim_folder=~/.config/nvim
-# nerd_tree_bookmarks=~/.NERDTreeBookmarks
 backup_rand=$RANDOM
 
 # detect if there's a .vim folder
@@ -22,10 +21,6 @@ hash git >/dev/null && /usr/bin/env git clone -b 'lua' git@github.com:zouzonghua
     echo "Sorry, Git is not installed yet!"
   exit
 }
-
-# make symbolic links
-# echo "link other config file to your home directory.."
-# ln -s $nvim_folder/NERDTreeBookmarks $nerd_tree_bookmarks
 
 # run PackerSync to install all plugins
 nvim -c "autocmd User PackerComplete quitall" -c "PackerSync"
