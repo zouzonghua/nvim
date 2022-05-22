@@ -4,8 +4,8 @@
 vim.g.mapleader = ','
 vim.o.mouse = 'a' -- mouse support
 vim.opt.clipboard = { 'unnamedplus' } -- system clipboard
-vim.opt.swapfile = false -- no swap file or vim.cmd('set noswapfile')
 vim.opt.undofile = true -- persistent undo history
+vim.opt.swapfile = false -- no swap file or vim.cmd('set noswapfile')
 
 --------------------------------------------------------------------------------
 -- Appearance
@@ -35,12 +35,6 @@ vim.o.softtabstop = 2 -- Backspace key back the length of indented spaces
 vim.o.expandtab = true -- use spaces
 vim.opt.list = true -- Show invisible characters
 vim.opt.listchars = 'tab:»■,trail:■' -- Spaces (including Tab) show small squares
-
---------------------------------------------------------------------------------
--- Search
---------------------------------------------------------------------------------
-vim.o.ignorecase = true -- case insensitive searching
-vim.o.smartcase = true -- overrides ignorecase when pattern contains caps
 
 --------------------------------------------------------------------------------
 -- Folding
