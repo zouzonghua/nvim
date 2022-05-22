@@ -155,7 +155,6 @@ return packer.startup(function(use)
   use 'rafamadriz/friendly-snippets' -- a bunch of snippets to use
 
   -- Colorscheme
-  use {
-    'tomasiser/vim-code-dark',
-  }
+  use 'tomasiser/vim-code-dark'
+
 end)
