@@ -42,7 +42,7 @@ function M.config()
           },
         },
         'encoding',
-        { 'fileformat', icons_enabled = true },
+        { 'fileformat', icons_enabled = false },
         'filetype',
       },
       lualine_y = { 'progress' },
