@@ -10,6 +10,7 @@ local M = {}
 function M.config()
   bufferline.setup {
     options = {
+      separator_style = "thick",
       numbers = function(opts)
         return string.format('%s.', opts.ordinal, opts.id)
       end,
@@ -20,7 +21,7 @@ function M.config()
       show_close_icon = false,
       offsets = {
         {
-          filetype = 'NvimTree',
+          filetype = 'defx',
           text = 'File Explorer',
           text_align = 'center',
         },
