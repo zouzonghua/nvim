@@ -25,8 +25,8 @@ vim.keymap.set('n', '<Leader>4', '<cmd>BufferLineGoToBuffer 4<CR>')
 
 -- neoterm
 vim.keymap.set('t', '<esc>', [[<C-\><C-n>]])
-vim.keymap.set('n', '<C-t>', '<cmd>Ttoggle<CR>')
-vim.keymap.set('t', '<C-t>', '<C-\\><C-N>:Ttoggle<CR>')
+vim.keymap.set('n', '<C-y>', '<cmd>Ttoggle<CR>')
+vim.keymap.set('t', '<C-y>', '<C-\\><C-N>:Ttoggle<CR>')
 
 -- telescope
 local telescope = require("telescope.builtin")
