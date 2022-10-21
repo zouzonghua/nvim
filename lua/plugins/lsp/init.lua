@@ -5,8 +5,8 @@ if not lspconfig_status_ok then
   return utils.emptyConfig()
 end
 
-local nvim_lsp_installer_status_ok, _ = pcall(require, 'nvim-lsp-installer')
-if not nvim_lsp_installer_status_ok then
+local nvim_mason_status_ok, _ = pcall(require, 'mason')
+if not nvim_mason_status_ok then
   return utils.emptyConfig()
 end
 

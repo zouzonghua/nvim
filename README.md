@@ -54,8 +54,8 @@ sh <(curl -L https://github.com/zouzonghua/nvim/raw/lua/install.sh)
 
 ### Lsp
 
-- nvim-lspconfig <https://github.com/neovim/nvim-lspconfig>
-- nvim-lsp-installer <https://github.com/williamboman/nvim-lsp-installer>
+- mason.nvim <https://github.com/williamboman/mason.nvim>
+- mason-lspconfig.nvim <https://github.com/williamboman/mason-lspconfig.nvim>
 - null-ls.nvim <https://github.com/jose-elias-alvarez/null-ls.nvim>
 
 ### Cmp
